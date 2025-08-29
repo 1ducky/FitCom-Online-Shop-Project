@@ -1,3 +1,10 @@
 # FitCom-Online-Shop-Project
 
-branch frontend berisikan pengerjaan bagian UI/UX user, menampilkan data ke user dan mengelola data dari backend
+
+
+branch Main adalah versi stabil jadi jangan lakukan push di branch main 
+sebelum melakukan staging
+saat melakukan push masuk ke branch yang terkait(frontend/databse)
+
+branch staging adalah sebuah tempat untuk ujicoba sebelum membuat versi stabilnya
+
