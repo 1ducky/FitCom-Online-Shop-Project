@@ -1,0 +1,25 @@
+    :root {
+        --main-green: #288f2d;   /* main-green */
+        --light-green: #6cf678; /* light-green */
+        --dark-green: #1b5e20; /* dark-green */
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    h1,h1,h3,h4,h5,h6 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 450;
+        font-style: normal;
+            color: var(--dark-green);
+    }
+
+    p{
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
