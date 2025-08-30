@@ -33,7 +33,7 @@
 
 <script>
     async function fetchdata(){
-        const res= await fetch('./api.php/detail')
+        const res= await fetch('./backend/api.php/detail')
         const data = await res.json()
         console.log(data)
     }
