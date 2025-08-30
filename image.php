@@ -1,5 +1,5 @@
 <?php
-require('db.php');
+require('backend/db.php');
 
 $id = htmlspecialchars($_GET['code']);
 $res= $conn->query("SELECT type,gambar from image where kode_gambar='$id'");

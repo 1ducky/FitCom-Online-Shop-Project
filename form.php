@@ -43,7 +43,7 @@
 
 <?php
 
-    $res= file_get_contents('http://localhost/shop/api.php/detail');    
+    $res= file_get_contents('http://localhost/shop/backend/api.php/detail');    
     $data= json_decode($res,true);
 ?>
 <img src="image.php?code=p002" alt="">
