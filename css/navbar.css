@@ -1,31 +1,59 @@
-    .navbar {
-        background-color: var(--main-green) !important;
-    }
-    .navbar-img, .nav-link {
-        color: #ffffff !important;
-    }
-    .nav-link:hover {
-        color: #b2d3b2 !important;
-    }
-
-    .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); } 
-
-    .navbar-img {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin-right: 2rem;
-        font-size: 1.5rem;
-        text-decoration: none !important;
-    }
-
-    .navbar-img img {
-        height: 70px;
-        width: auto;
-        border-radius: 40%;
-        object-fit: contain;
-        -webkit-border-radius: 40%;
-        -moz-border-radius: 40%;
-        -ms-border-radius: 40%;
-        -o-border-radius: 40%;
-}
+/* Navbar styling */
+        .navbar-custom {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            border-radius: 50px;
+            margin: 15px;
+            padding: 8px 20px;
+        }
+        
+        .search-custom {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            max-width: 300px;
+        }
+        
+        .search-custom::placeholder {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+/* Styling untuk tombol toggle */
+        .navbar-toggler-custom {
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 10px !important;
+            padding: 5px 10px !important;
+            font-size: 1.2rem !important;
+        }
+        
+        .navbar-toggler {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Offcanvas styling */
+        .offcanvas-custom {
+            border-radius: 20px 0 0 20px;
+            background: linear-gradient(to bottom, #28a745, #20c997);
+        }
+        
+        .offcanvas-header-custom {
+            background: rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        .nav-link-custom {
+            color: white !important;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .nav-link-custom:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding-left: 25px;
+        }
+        
