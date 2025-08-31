@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2025 at 01:08 PM
+-- Generation Time: Aug 31, 2025 at 04:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -46,19 +46,6 @@ INSERT INTO `category` (`id`, `kode_jenis`, `kriteria`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `image`
---
-
-CREATE TABLE `image` (
-  `id` int(11) NOT NULL,
-  `type` varchar(50) NOT NULL,
-  `kode_gambar` varchar(10) DEFAULT NULL,
-  `gambar` mediumblob DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
@@ -71,7 +58,9 @@ CREATE TABLE `products` (
   `stok` int(9) NOT NULL,
   `create_at` date NOT NULL DEFAULT current_timestamp(),
   `update_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `kode_jenis` varchar(10) DEFAULT NULL
+  `kode_jenis` varchar(10) DEFAULT NULL,
+  `gambar` mediumblob DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -83,13 +72,6 @@ CREATE TABLE `products` (
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `image`
---
-ALTER TABLE `image`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `unique_kode_produk` (`kode_gambar`);
 
 --
 -- Indexes for table `products`
@@ -107,12 +89,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `image`
---
-ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
