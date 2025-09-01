@@ -22,7 +22,7 @@ function Router($rest) {
         $method= $segment[1] ?? null;
         $param=$segment[2] ?? null;
         $data = $rest[$endpoint]($method,$param) ;
-        print_r($data);
+
 
         if($data == null){
             http_response_code(400);
