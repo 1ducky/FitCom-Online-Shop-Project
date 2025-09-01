@@ -22,11 +22,7 @@ function Router($rest) {
         $method= $segment[1] ?? null;
         $param=$segment[2] ?? null;
         $data = $rest[$endpoint]($method,$param) ;
-        foreach ($data as &$row) {
-            if (isset($row['gambar'])) {
-                $row['gambar'] = base64_encode($row['gambar']) ?? 'Tidak ada data gambar';
-            }
-        }
+        print_r($data);
 
         if($data == null){
             http_response_code(400);
