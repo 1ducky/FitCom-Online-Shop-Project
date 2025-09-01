@@ -21,7 +21,7 @@ function Router($rest) {
     }else if ($endpoint && isset($rest[$endpoint])){
         $method= $segment[1] ?? null;
         $param=$segment[2] ?? null;
-        $data = $rest[$endpoint]($method,$param) ;
+        [$data,$total] = $rest[$endpoint]($method,$param) ;
 
 
         if($data == null){
@@ -36,7 +36,9 @@ function Router($rest) {
         echo json_encode([
 
             'status' => 'ok',
-            'data' => $data
+            'data' => $data,
+            'total' => $total
+
         ]);
         return;
     };

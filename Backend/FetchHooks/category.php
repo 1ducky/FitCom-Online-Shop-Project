@@ -10,7 +10,14 @@ function category( $category ):array {
         where p.kode_jenis = '".$category. "'";
         $result = mysqli_query($conn, $sql);
         $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        return $data;
+        
+        
+        $sql="select count(*) as total from products where kode_jenis = '$category'";
+        $result = mysqli_query($conn,$sql);
+        $row=mysqli_fetch_assoc($result);
+        $total=$row['total'];
+
+        return [$data,$total];
     }
     return [];
 }
