@@ -1,7 +1,13 @@
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f8f9fa;
-    }
+        :root {
+            --primary-color: #2e8b57;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5fcf7;
+        }
 
 /* Logo brand */
     .brand-img {
@@ -15,3 +21,16 @@
         color: #28a745;
         font-weight: bold;
     }
+
+    /* Footer */
+    footer {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        margin: 0;
+        padding: 8px 10px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
