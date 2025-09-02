@@ -10,7 +10,6 @@ function Router($rest) {
     }
     $segment= explode("/", trim($sanitize, "/"));
     
-    
     $endpoint = $segment[0] ?? null ;
 
     header('Content-Type: application/json');
@@ -21,7 +20,7 @@ function Router($rest) {
     }else if ($endpoint && isset($rest[$endpoint])){
         $method= $segment[1] ?? null;
         $param=$segment[2] ?? null;
-        [$data,$total] = $rest[$endpoint]($method,$param) ;
+        [$data,$total,$limit,$offset] = $rest[$endpoint]($method,$param) ;
 
 
         if($data == null){
@@ -37,7 +36,10 @@ function Router($rest) {
 
             'status' => 'ok',
             'data' => $data,
-            'total' => $total
+            'total' => $total,
+            'limit' => $limit,
+            'offset' => $offset
+
 
         ]);
         return;

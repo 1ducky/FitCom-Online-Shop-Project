@@ -2,15 +2,16 @@
 
 require('./db.php');
 
-
-
 function Detail($method=null,$params=null) : array  {
     global $conn;
+
+    $limit =(int) ($_GET['limit'] ?? 1);
+    $offset=(int) ($_GET['offset'] ?? 0);
 
     if(!$method){
         $sql = 'select kode_produk,nama_produk,satuan,harga,stok,p.kode_jenis,c.kode_jenis,c.kriteria from products p
         left join category c
-        on p.kode_jenis = c.kode_jenis ';
+        on p.kode_jenis = c.kode_jenis limit '. $limit .' offset ' . $offset;
 
         $result = mysqli_query($conn,$sql);
         $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -20,13 +21,13 @@ function Detail($method=null,$params=null) : array  {
         $row=mysqli_fetch_assoc($result);
         $total=$row['total'];
 
-        return [$data,$total];
+        return [$data,$total,$limit,$offset];
         
     }else if($method == 'date'){
         $sql = "select kode_produk,nama_produk,satuan,harga,stok,p.kode_jenis,c.kode_jenis,c.kriteria from products p 
         left join category c
         on p.kode_jenis = c.kode_jenis
-        order by update_at $params";
+        order by update_at $params" . ' limit '. $limit .' offset ' . $offset;
 
         $result = mysqli_query($conn,$sql);
         $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
@@ -36,7 +37,7 @@ function Detail($method=null,$params=null) : array  {
         $row=mysqli_fetch_assoc($result);
         $total=$row['total'];
 
-        return [$data,$total];
+        return [$data,$total,$limit,$offset];
         
     }else if($method == 'search') {
         $keyword=mysqli_real_escape_string($conn,$params);
@@ -44,7 +45,7 @@ function Detail($method=null,$params=null) : array  {
         left join category c
         on p.kode_jenis = c.kode_jenis
         where nama_produk like '%$keyword%' 
-        or kode_produk like '%$keyword%'";
+        or kode_produk like '%$keyword%'" . ' limit '. $limit .' offset ' . $offset;
         
         $result = mysqli_query($conn,$sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -55,7 +56,7 @@ function Detail($method=null,$params=null) : array  {
         $row=mysqli_fetch_assoc($result);
         $total=$row['total'];
 
-        return [$data,$total];
+        return [$data,$total,$limit,$offset];
 
     }else if($method == 'full'){
         $keyword=mysqli_real_escape_string($conn,$params);
@@ -65,7 +66,7 @@ function Detail($method=null,$params=null) : array  {
         $sql="select kode_produk,nama_produk,satuan,harga,stok,p.kode_jenis,c.kode_jenis,c.kriteria from products p
         left join category c
         on p.kode_jenis = c.kode_jenis
-        where kode_produk = '$keyword'";
+        where kode_produk = '$keyword'" ;
 
         $result = mysqli_query($conn,$sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
