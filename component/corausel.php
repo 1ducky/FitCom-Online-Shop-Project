@@ -1,60 +1,35 @@
-    <div class="promo-section">
-    <div class="container text-center py-5">
-    <h1 class="fw-bold mb-5 display-5">Promo Spesial Bulan Ini!</h1>
-
-    <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-        <!-- Item 1 -->
-            <div class="carousel-item active">
-                <div class="col-12 col-md-6">
-                    <div class="card promo-card position-relative h-100 d-flex flex-column">
-                        <span class="promo-badge">DISKON 20%</span>
-                        <div class="img-container">
-                            <img src="./assets/pexels-shvetsa-5830979.jpg" class="card-img-top" alt="Pupuk Organik">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Pupuk Organik Diskon 20%</h5>
-                            <p class="card-text">Tingkatkan kesuburan tanah Anda dengan pupuk organik berkualitas tinggi.</p>
-                            <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
-                        </div>
+    <div class="container mt-4 main-content">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/pexels-arina-krasnikova-6316520.jpg" class="d-block w-100" alt="Pertanian Organik">
+                    <div class="carousel-caption">
+                        <h2 class="fw-bold">Pertanian Organik Modern</h2>
+                        <p>Dapatkan produk pertanian organik berkualitas tinggi untuk hasil panen yang melimpah</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/Organik-Petrosida.png" class="d-block w-100" alt="Pupuk Berkualitas">
+                    <div class="carousel-caption">
+                        <h2 class="fw-bold">Pupuk Berkualitas Tinggi</h2>
+                        <p>Tingkatkan kesuburan tanah dengan pupuk pilihan dari para ahli</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/macam-macam2.png" class="d-block w-100" alt="Benih Unggul">
+                    <div class="carousel-caption">
+                        <h2 class="fw-bold">Benih Unggul Terjamin</h2>
+                        <p>Benih pilihan dengan kualitas terbaik untuk hasil panen optimal</p>
                     </div>
                 </div>
             </div>
-
-        <!-- Item 2 -->
-        <div class="carousel-item">
-            <div class="col-12 col-md-6">
-                <div class="card promo-card position-relative h-100 d-flex flex-column">
-                    <span class="promo-badge">DISKON 20%</span>
-                    <div class="img-container">
-                        <img src="./assets/pexels-nadin-sh-78971847-26756785.jpg" class="card-img-top" alt="Bibit Tanaman">
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Bibit Diskon 20%</h5>
-                        <p class="card-text">Dapatkan bibit tanaman unggulan dengan kualitas terbaik untuk kebun Anda.</p>
-                        <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Tambah item lain kalau ada... -->
-        </div>
-
-        <!----- Button navigasi ----->
-            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-
-        <!-- Dots opsional -->
-            <div class="carousel-indicators position-static mt-3">
-                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-label="1"></button>
-                <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="2"></button>
-            </div>
         </div>
     </div>
-</div>
