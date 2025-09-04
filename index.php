@@ -24,14 +24,14 @@
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./image/pexels-arina-krasnikova-6316520.jpg" class="d-block w-100" alt="Pertanian Organik">
+                    <img src="./assets/pexels-arina-krasnikova-6316520.jpg" class="d-block w-100" alt="Pertanian Organik">
                     <div class="carousel-caption d-none d-md-block">
                         <h2 class="fw-bold">Pertanian Organik Modern</h2>
                         <p>Dapatkan produk pertanian organik berkualitas tinggi untuk hasil panen yang melimpah</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./image/Organik-Petrosida.png" class="d-block w-100" alt="Pupuk Berkualitas">
+                    <img src="./assets/Organik-Petrosida.png" class="d-block w-100" alt="Pupuk Berkualitas">
                     <div class="carousel-caption d-none d-md-block">
                         <h2 class="fw-bold">Pupuk Berkualitas Tinggi</h2>
                         <p>Tingkatkan kesuburan tanah dengan pupuk pilihan dari para ahli</p>
@@ -65,7 +65,7 @@
                     <div class="card promo-card position-relative">
                         <span class="promo-badge">DISKON 20%</span>
                         <div class="img-container">
-                            <img src="image/pexels-shvetsa-5830979.jpg" class="card-img-top" alt="Pupuk Organik">
+                            <img src="./assets/pexels-shvetsa-5830979.jpg" class="card-img-top" alt="Pupuk Organik">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Pupuk Organik Diskon 20%</h5>
@@ -78,7 +78,7 @@
                     <div class="card promo-card position-relative">
                         <span class="promo-badge">DISKON 20%</span>
                         <div class="img-container">
-                            <img src="image/pexels-nadin-sh-78971847-26756785.jpg" class="card-img-top" alt="Bibit Tanaman">
+                            <img src="./assets/pexels-nadin-sh-78971847-26756785.jpg" class="card-img-top" alt="Bibit Tanaman">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Bibit Diskon 20%</h5>
