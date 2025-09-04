@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko Pertanian Online - GreenCore</title>
     <!-------- Icon --------->
-    <link rel="icon" type="image/png" href="image/brand-img.png"/>
+    <link rel="icon" type="image/png" href="./assets/brand-img.png"/>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
