@@ -25,21 +25,21 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./assets/pexels-arina-krasnikova-6316520.jpg" class="d-block w-100" alt="Pertanian Organik">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2 class="fw-bold">Pertanian Organik Modern</h2>
                         <p>Dapatkan produk pertanian organik berkualitas tinggi untuk hasil panen yang melimpah</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./assets/Organik-Petrosida.png" class="d-block w-100" alt="Pupuk Berkualitas">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2 class="fw-bold">Pupuk Berkualitas Tinggi</h2>
                         <p>Tingkatkan kesuburan tanah dengan pupuk pilihan dari para ahli</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Benih Unggul">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption">
                         <h2 class="fw-bold">Benih Unggul Terjamin</h2>
                         <p>Benih pilihan dengan kualitas terbaik untuk hasil panen optimal</p>
                     </div>
@@ -56,40 +56,8 @@
         </div>
     </div>
 
-  <!--------- Promo product ------------->
-    <div class="promo-section">
-        <div class="container text-center py-5">
-            <h1 class="fw-bold mb-5 display-5">Promo Spesial Bulan Ini!</h1>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-5 col-md-6">
-                    <div class="card promo-card position-relative">
-                        <span class="promo-badge">DISKON 20%</span>
-                        <div class="img-container">
-                            <img src="./assets/pexels-shvetsa-5830979.jpg" class="card-img-top" alt="Pupuk Organik">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Pupuk Organik Diskon 20%</h5>
-                            <p class="card-text">Tingkatkan kesuburan tanah Anda dengan pupuk organik berkualitas tinggi.</p>
-                            <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="card promo-card position-relative">
-                        <span class="promo-badge">DISKON 20%</span>
-                        <div class="img-container">
-                            <img src="./assets/pexels-nadin-sh-78971847-26756785.jpg" class="card-img-top" alt="Bibit Tanaman">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Bibit Diskon 20%</h5>
-                            <p class="card-text">Dapatkan bibit tanaman unggulan dengan kualitas terbaik untuk kebun Anda.</p>
-                            <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--------- Promo product ------------->
+    <?php include 'component/corausel.php'; ?>
 
 <!--- footer -->
     <?php include "component/footer.php"?>
@@ -100,8 +68,25 @@
 
     <!-- Jquery -->
     <script>
-        $(document).ready(function(){
-            
+    document.addEventListener('DOMContentLoaded', function () {
+    const itemsPerSlide = 2;               // 2 kartu per slide
+    const items = document.querySelectorAll('#promoCarousel .carousel-item');
+    items.forEach((el) => {
+        let next = el.nextElementSibling;
+        for (let i = 1; i < itemsPerSlide; i++) {
+            if (!next) next = items[0];        // loop ke awal bila habis
+                el.appendChild(next.firstElementChild.cloneNode(true));
+                next = next.nextElementSibling;
+            }
+        });
+    });
+        document.getElementById("mobileSearchBtn").addEventListener("click", function () {
+            const box = document.getElementById("mobileSearchBox");
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
         });
     </script>
 </body>

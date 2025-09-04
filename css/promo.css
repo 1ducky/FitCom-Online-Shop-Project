@@ -1,3 +1,36 @@
+        /* Biar konten tidak terpotong */
+#promoCarousel .carousel-inner { overflow: visible; }
+
+/* Tampilkan 2 kartu per slide di ≥ md */
+#promoCarousel .carousel-item { display: none; }
+#promoCarousel .carousel-item.active,
+#promoCarousel .carousel-item-next,
+#promoCarousel .carousel-item-prev { display: flex; }
+
+#promoCarousel .carousel-item > .col-12 { /* wadah kartu */
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 12px;
+}
+@media (min-width: 768px) {
+  #promoCarousel .carousel-item > .col-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Tinggi kartu rapi, tombol selalu di bawah */
+#promoCarousel .promo-card { height: 100%; }
+#promoCarousel .promo-card .card-body { display: flex; flex-direction: column; }
+#promoCarousel .promo-card .btn { margin-top: auto; }
+
+/* Haluskan transisi saat multi-item */
+@media (min-width: 768px) {
+  #promoCarousel .carousel-item-next.carousel-item-start,
+  #promoCarousel .carousel-item-prev.carousel-item-end { transform: translateX(0); }
+}
+
+        
         .promo-section {
             background-color: #f8f9fa;
             padding: 3rem 0;

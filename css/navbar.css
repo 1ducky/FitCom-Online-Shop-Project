@@ -1,4 +1,3 @@
-/* Navbar styling */
         .navbar-custom {
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
@@ -18,7 +17,6 @@
             color: rgba(255, 255, 255, 0.8) !important;
         }
         
-/* Styling untuk tombol toggle */
         .navbar-toggler-custom {
             color: white !important;
             border: 1px solid rgba(255, 255, 255, 0.3) !important;
@@ -33,6 +31,31 @@
             opacity: 1 !important;
         }
         
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 15px;
+            bottom: 30%;
+            transform: translateY(20%);
+
+        }
+        .carousel-caption h2 {
+            font-size: 2rem;
+        }
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+
+        /* Ukuran teks di mobile */
+        @media (max-width: 576px) {
+            .carousel-caption h2 {
+                font-size: 1.10rem;
+            }
+            .carousel-caption p {
+                font-size: 0.7rem;
+            }
+        }
+
         /* Offcanvas styling */
         .offcanvas-custom {
             border-radius: 20px 0 0 20px;
