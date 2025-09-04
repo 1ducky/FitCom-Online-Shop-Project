@@ -19,19 +19,19 @@
 <body>
     <?php include 'component/navbar.php'; ?>
 
-    <!-- Carousel -->
+    <!--------- Carousel ------------------>
     <?php include 'component/corausel.php'; ?>
     <!--------- Promo product ------------->
     <?php include 'component/promo.php'; ?>
 
-<!--- footer -->
+<!-------------- footer ------------------->
     <?php include "component/footer.php"?>
 
-    <!-- Bootstrap & jQuery JS -->
+    <!------ Bootstrap & jQuery JS -------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Jquery -->
+    <!---------- Jquery ------------------>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
     const itemsPerSlide = 2;               // 2 kartu per slide
