@@ -10,5 +10,6 @@ if(isset($row['gambar'])){
     echo $row['gambar'];
 }else {
     http_response_code(404);
-    echo 'Image not Found';
+    header("Content-Type: image/jpeg");
+    readfile(__DIR__.'./notfound.jpg');
 }

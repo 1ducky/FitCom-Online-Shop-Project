@@ -31,14 +31,18 @@
             }
         });
     });
-        document.getElementById("mobileSearchBtn").addEventListener("click", function () {
-            const box = document.getElementById("mobileSearchBox");
-            if (box.style.display === "none" || box.style.display === "") {
-                box.style.display = "block";
-            } else {
-                box.style.display = "none";
-            }
-        });
+        // document.getElementById("mobileSearchBtn").addEventListener("click", function () {
+        //     const box = document.getElementById("mobileSearchBox");
+        //     if (box.style.display === "none" || box.style.display === "") {
+        //         box.style.display = "block";
+        //     } else {
+        //         box.style.display = "none";
+        //     }
+        // });
+    $("#mobileSearchBtn").click(function() {
+        $("#mobileSearchBox").toggle();
+    });
+
     </script>
 </body>
 </html>
