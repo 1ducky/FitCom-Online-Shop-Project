@@ -33,17 +33,17 @@
     <div class="offcanvas-body">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link nav-link-custom active" aria-current="page" href="#">
+                <a class="nav-link nav-link-custom active" aria-current="page" href="<?= $basepath?>/">
                     <i class="fas fa-home me-2"></i>Home
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-custom" href="Produk/">
+                <a class="nav-link nav-link-custom" href="<?= $basepath?>/Produk">
                     <i class="fas fa-seedling me-2"></i>Produk
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-custom" href="Tentang/">
+                <a class="nav-link nav-link-custom" href="<?= $basepath?>/tentang">
                     <i class="fas fa-info-circle me-2"></i>Tentang Kami
                 </a>
             </li>
