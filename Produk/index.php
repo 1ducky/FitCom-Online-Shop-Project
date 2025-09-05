@@ -1,41 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include(__DIR__. './../config/setup.php')?>
-<body>
-    <?php include '../component/navbar.php'; ?>
-    <!-- Offcanvas Menu -->
-    <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="navtoggler" aria-labelledby="navtogglerLabel">
-        <div class="offcanvas-header offcanvas-header-custom">
-            <h5 class="offcanvas-title" id="navtogglerLabel">GreenCore Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom active" aria-current="page" href="../">
-                        <i class="fas fa-home me-2"></i>Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="#">
-                        <i class="fas fa-seedling me-2"></i>Produk
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="../Tentang/">
-                        <i class="fas fa-info-circle me-2"></i>Tentang Kami
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <h1>produk</h1>
-    <h2>ini halaman produk</h2>
+<?php 
+include(__DIR__. './../config/setup.php');
+$res=null;
+// $res= file_get_contents($basepath.'/backend/api.php/detail?limit=3');    
+$data= (json_decode($res,true)) ?? null;
+?>
 
-    <?php include "../component/footer.php"; ?>
+
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="<?= $basepath?>/css/card-interaction.css">
+<html lang="en">
+<body>
+    <?php include $basedir. '/component/navbar.php'; ?>
+    <?php include $basedir. '/component/category.php'; ?>
+    <?php include $basedir. '/component/product-list.php';?>
+
+    <!-- tampilkan kartu produk dari hasil data -->
+    <?php echo RenderProductList($data);?>
+
+
+
+    <?php include $basedir."/component/footer.php"; ?>
 
     <!-- Bootstrap & jQuery JS -->
-    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Jquery -->
@@ -43,6 +32,16 @@
         $(document).ready(function(){
             
         });
+
+        function scrollTriger() {
+            $(".fade-in").each(function () {  
+                let rect=this.getBoundingClientRect();
+                if(rect.top < window.innerHeight - 50 ){
+                    $(this).addClass("show")
+                }
+            })
+          }
+        $(window).on("scroll load", scrollTriger);
     </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+/* Card Produk */
+    .product-card {
+      border: none;
+      border-radius: 12px;
+      background-color: var(--light-green);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .product-card:hover , .hov:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .hov{
+        transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .row .col-md-4 .product-card img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: .3rem;
+      background-color: #a1a1a1;
+      }
+
+
+    /* Animasi fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-in-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }

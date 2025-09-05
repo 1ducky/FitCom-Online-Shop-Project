@@ -2,6 +2,7 @@
 <?php 
 include (__DIR__ . './envloader.php');
 $basepath=$env['ROOT_PATH'].$env['MAIN_PATH'];
+$basedir=dirname(__DIR__   );
 ?>
 
 <head>

@@ -1,0 +1,10 @@
+:root {
+      --main-green: #2e7d32;   /* hijau utama */
+      --light-green: #e8f5e9; /* hijau muda */
+      --dark-green: #1b5e20;  /* hijau gelap */
+    }
+img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
