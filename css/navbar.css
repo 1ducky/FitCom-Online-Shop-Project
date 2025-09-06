@@ -1,0 +1,82 @@
+        .navbar-custom {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+            border-radius: 50px;
+            margin: 15px;
+            padding: 8px 20px;
+        }
+        
+        .search-custom {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            max-width: 300px;
+        }
+        
+        .search-custom::placeholder {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .navbar-toggler-custom {
+            color: white !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 10px !important;
+            padding: 5px 10px !important;
+            font-size: 1.2rem !important;
+        }
+        
+        .navbar-toggler {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 15px;
+            bottom: 30%;
+            transform: translateY(20%);
+
+        }
+        .carousel-caption h2 {
+            font-size: 2rem;
+        }
+        .carousel-caption p {
+            font-size: 1rem;
+        }
+
+        /* Ukuran teks di mobile */
+        @media (max-width: 576px) {
+            .carousel-caption h2 {
+                font-size: 1.10rem;
+            }
+            .carousel-caption p {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Offcanvas styling */
+        .offcanvas-custom {
+            border-radius: 20px 0 0 20px;
+            background: linear-gradient(to bottom, #28a745, #20c997);
+        }
+        
+        .offcanvas-header-custom {
+            background: rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        .nav-link-custom {
+            color: white !important;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .nav-link-custom:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding-left: 25px;
+        }
+        
