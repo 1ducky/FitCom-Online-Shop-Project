@@ -19,7 +19,7 @@
     </div>
 </nav>
 
-<!-- Search input muncul saat icon ditekan (mobile) -->
+<!-- Search input icon -->
 <div id="mobileSearchBox" class="d-lg-none px-3 py-2 bg-light" style="display: none;">
     <input type="text" class="form-control" placeholder="Cari Produk">
 </div>
