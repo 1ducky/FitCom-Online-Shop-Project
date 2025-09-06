@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include (__DIR__ . './../config/setup.php') ?>
+<?php include (__DIR__ . '/../config/setup.php') ?>
 <body>
     <?php include '../component/navbar.php'; ?>
 

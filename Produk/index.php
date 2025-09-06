@@ -1,5 +1,5 @@
 <?php 
-include(__DIR__. './../config/setup.php');
+include(__DIR__. '/../config/setup.php');
 $res=null;
 // $res= file_get_contents($basepath.'/backend/api.php/detail?limit=3');    
 $data= (json_decode($res,true)) ?? null;
@@ -9,19 +9,19 @@ $data= (json_decode($res,true)) ?? null;
 
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="<?= $basepath?>/css/card-interaction.css">
+<link rel="stylesheet" href="<?= $basepath ?>/css/card-interaction.css">
 <html lang="en">
 <body>
-    <?php include $basedir. '/component/navbar.php'; ?>
-    <?php include $basedir. '/component/category.php'; ?>
-    <?php include $basedir. '/component/product-list.php';?>
+    <?php include $basedir . '/component/navbar.php'; ?>
+    <?php include $basedir . '/component/category.php'; ?>
+    <?php include $basedir . '/component/product-list.php';?>
 
     <!-- tampilkan kartu produk dari hasil data -->
     <?php echo RenderProductList($data);?>
 
 
 
-    <?php include $basedir."/component/footer.php"; ?>
+    <?php include $basedir ."/component/footer.php"; ?>
 
     <!-- Bootstrap & jQuery JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
