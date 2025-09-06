@@ -2,7 +2,7 @@
 include(__DIR__. '/../config/setup.php');
 $res=null;
 // $res= file_get_contents($basepath.'/backend/api.php/detail?limit=3');    
-$data= (json_decode($res,true)) ?? null;
+$data = json_decode($res !== null ? $res : '[]', true);
 ?>
 
 
