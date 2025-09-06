@@ -1,12 +1,22 @@
 <?php 
 include(__DIR__. '/../config/setup.php');
-$res=null;
-// $res= file_get_contents($basepath.'/backend/api.php/detail?limit=3');    
-$data = json_decode($res !== null ? $res : '[]', true);
+
+$page=(int) ($_GET['page'] ?? 0);
+$page=max($page,0);
+$limit=10;
+$offset= $page*$limit;
+
+try{
+    $res= @file_get_contents($basepath."/backend/api.php/detail?limit=$limit&offset=$offset");  
+    if($res === null){
+        throw new Exception('Gagal Fetch');
+    }  
+    $data = json_decode($res !== null ? $res : '[]', true);
+}catch(Exception $e){
+    $data=null;
+};
+
 ?>
-
-
-
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="<?= $basepath ?>/css/card-interaction.css">

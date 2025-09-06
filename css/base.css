@@ -3,3 +3,8 @@
       --light-green: #e8f5e9; /* hijau muda */
       --dark-green: #1b5e20;  /* hijau gelap */
     }
+a{
+  color: inherit !important;
+  text-decoration: none !important;
+
+}
