@@ -4,7 +4,7 @@
 $code=(string)($_GET['code'] ?? '');
 
 try {
-    $res = @file_get_contents($basepath . "/backend/api.php/detail?code=$code");
+    $res = @file_get_contents($basepath . "/backend/api.php/detail/full/$code");
     if ($res === false) {
         throw new Exception('Gagal Fetch');
     }
