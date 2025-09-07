@@ -72,7 +72,7 @@ function Detail($method=null,$params=null) : array  {
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $total=1;
 
-        return [$data,$total];
+        return [$data,$total,$limit,$offset];
     }
     return [];
     

@@ -9,21 +9,26 @@ function Router($rest) {
         $sanitize=substr($url,$cut+strlen('api.php'));
     }
     $segment= explode("/", trim($sanitize, "/"));
-    
     $endpoint = $segment[0] ?? null ;
 
+    // Defining Json Content
     header('Content-Type: application/json');
-    
+
+    //Checking Endponint
     if(!$endpoint){
+        //No EndPoint
         http_response_code(404);
 
     }else if ($endpoint && isset($rest[$endpoint])){
+        //Do Logic EndPoint
         $method= $segment[1] ?? null;
-        $param=$segment[2] ?? null;
+        $param = $segment[2] ?? null;
+        $param=str_replace('-',' ',$param) ?? null;
         [$data,$total,$limit,$offset] = $rest[$endpoint]($method,$param) ;
 
 
         if($data == null){
+            //No Data Found
             http_response_code(400);
             echo json_encode([
                 'status' => 'error',
@@ -31,7 +36,8 @@ function Router($rest) {
             ]);
             return;
         }
-
+        
+        //Send Json Data
         echo json_encode([
 
             'status' => 'ok',
