@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+    <!-- load Based COnfiguration -->
+    <?php include('./config/setup.php'); ?>
+<body>
+    
+    <?php include 'component/navbar.php'; ?>
+    <!-- Carousel -->
+    <?php include 'component/corausel.php'; ?>
+    <!--------- Promo product ------------->
+    <?php include 'component/promo.php'; ?>
+
+<!--- footer -->
+    <?php include "component/footer.php"?>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const itemsPerSlide = 2;               // 2 kartu per slide
+    const items = document.querySelectorAll('#promoCarousel .carousel-item');
+    items.forEach((el) => {
+        let next = el.nextElementSibling;
+        for (let i = 1; i < itemsPerSlide; i++) {
+            if (!next) next = items[0];        // loop ke awal bila habis
+                el.appendChild(next.firstElementChild.cloneNode(true));
+                next = next.nextElementSibling;
+            }
+        });
+    });
+        // document.getElementById("mobileSearchBtn").addEventListener("click", function () {
+        //     const box = document.getElementById("mobileSearchBox");
+        //     if (box.style.display === "none" || box.style.display === "") {
+        //         box.style.display = "block";
+        //     } else {
+        //         box.style.display = "none";
+        //     }
+        // });
+    $("#mobileSearchBtn").click(function() {
+        $("#mobileSearchBox").toggle();
+    });
+
+    </script>
+</body>
+</html>

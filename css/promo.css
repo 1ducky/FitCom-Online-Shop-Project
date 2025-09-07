@@ -1,0 +1,115 @@
+        /* Biar konten tidak terpotong */
+#promoCarousel .carousel-inner { overflow: visible; }
+
+/* Tampilkan 2 kartu per slide di ≥ md */
+#promoCarousel .carousel-item { display: none; }
+#promoCarousel .carousel-item.active,
+#promoCarousel .carousel-item-next,
+#promoCarousel .carousel-item-prev { display: flex; }
+
+#promoCarousel .carousel-item > .col-12 { /* wadah kartu */
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 12px;
+}
+@media (min-width: 768px) {
+  #promoCarousel .carousel-item > .col-12 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Tinggi kartu rapi, tombol selalu di bawah */
+#promoCarousel .promo-card { height: 100%; }
+#promoCarousel .promo-card .card-body { display: flex; flex-direction: column; }
+#promoCarousel .promo-card .btn { margin-top: auto; }
+
+/* Haluskan transisi saat multi-item */
+@media (min-width: 768px) {
+  #promoCarousel .carousel-item-next.carousel-item-start,
+  #promoCarousel .carousel-item-prev.carousel-item-end { transform: translateX(0); }
+}
+
+        
+        .promo-section {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+        }
+        
+        .promo-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 400px;
+        }
+        
+        .promo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .img-container {
+            overflow: hidden;
+            height: 350px;
+        }
+        
+        .img-container img {
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .promo-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-title {
+            color: #2e7d32;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-text {
+            color: #555;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .btn-success {
+            background-color: #2e7d32;
+            border-color: #2e7d32;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-success:hover {
+            background-color: #1b5e20;
+            border-color: #1b5e20;
+            transform: scale(1.05);
+        }
+        
+        .promo-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #ff5722;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            z-index: 10;
+        }
