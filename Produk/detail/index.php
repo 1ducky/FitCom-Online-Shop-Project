@@ -51,7 +51,13 @@ try {
                 }
             })
           }
-        $(window).on("scroll load", scrollTriger);</script>
+        $(window).on("scroll load", scrollTriger);
+            
+            $("#mobileSearchBtn").click(function() {
+            $("#mobileSearchBox").toggle();
+        });
+    </script>
+
 
 </body>
 </html>
