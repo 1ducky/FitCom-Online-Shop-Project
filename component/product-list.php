@@ -1,14 +1,15 @@
 <!-- Card Produk Render -->
+ <link rel="stylesheet" href="<?= $basepath . '/css/card-interaction.css'?>">
 <?php 
 function RenderProductList($data){
     global $basepath;
 
     ob_start();
-?>  
+?> 
 
 <section class="py-4 flex-grow-1">
     <div class="container">
-      <h2 class="h5 fw-bold text-success mb-3 fade-in">Daftar Produk</h2>
+      <h2 class="h5 fw-bold text-success mb-3 fade-in">Daftar Produk Terkait </h2>
       <?php if(!isset($data['data'])):?>
         <h2>Tidak Ada Produk Terkait</h2>
       <?php else:?>
@@ -19,11 +20,11 @@ function RenderProductList($data){
                     <div class="card shadow-sm h-100 fade-up">
                         <div class="card product-card h-100">
                         <img src="<?=$imgurl ?>" class="card-img-top" alt="<?=htmlspecialchars($product['nama_produk']) ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?=htmlspecialchars($product['nama_produk']) ?></h5>
-                            <p class="card-text"><?=htmlspecialchars($product['kriteria']) ?></p>
-                            <a href="#" class="btn btn-success">Lihat Detail</a>
-                        </div>
+                            <div class="card-body">
+                                <h5 class="card-title"><?=htmlspecialchars($product['nama_produk']) ?></h5>
+                                <p class="card-text"><?=htmlspecialchars($product['kriteria']) ?></p>
+                                <a href="<?= $basepath . '/produk/detail/?code=' . $product['kode_produk']?>" class="btn btn-success">Lihat Detail</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,11 @@
       background-color: #a1a1a1;
       }
 
+    .card img{
+      width: 200px;
+      height: 200px;
+    }
+
 
     /* Animasi fade-in */
     .fade-in {

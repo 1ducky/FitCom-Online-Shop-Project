@@ -24,7 +24,6 @@ try{
 
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="<?= $basepath ?>/css/card-interaction.css">
 <html lang="en">
 <body>
     <?php include $basedir . '/component/navbar.php'; ?>
