@@ -1,3 +1,4 @@
+<?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
@@ -46,6 +47,17 @@
                 <a class="nav-link nav-link-custom" href="<?= $basepath?>/tentang">
                     <i class="fas fa-info-circle me-2"></i>Tentang Kami
                 </a>
+            </li>
+            <li class="nav-item">
+                <?php if (isset($_SESSION['is_login']) && $_SESSION['is_login']): ?>
+                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/logout.php">
+                        <i class="fas fa-sign-out-alt me-2"></i>Log out
+                    </a>
+                <?php else: ?>
+                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/login.php">
+                        <i class="fas fa-sign-in-alt me-2"></i>Sign in
+                    </a>
+                <?php endif; ?>
             </li>
         </ul>
     </div>

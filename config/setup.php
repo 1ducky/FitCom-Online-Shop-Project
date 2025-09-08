@@ -1,5 +1,25 @@
-<!-- load env file -->
+<!-- load env file & cookie remember me -->
 <?php 
+session_start();
+require(__DIR__ . '/../Backend/db.php');
+
+// Kalau belum login tapi ada cookie
+if (!isset($_SESSION['is_login']) && isset($_COOKIE['remember_token'])) {
+    $token = $_COOKIE['remember_token'];
+
+    $stmt = $conn->prepare("SELECT user_id, email FROM accounts WHERE remember_token = ? LIMIT 1");
+    $stmt->bind_param("s", $token);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data   = $result->fetch_assoc();
+
+    if ($data) {
+        $_SESSION['user_id']  = $data['user_id'];
+        $_SESSION['email']    = $data['email'];
+        $_SESSION['is_login'] = true;
+    }
+}
+
 include (__DIR__ . '/envloader.php');
 $basepath=$env['ROOT_PATH'].$env['MAIN_PATH'];
 $basedir=dirname(__DIR__   );
