@@ -5,15 +5,28 @@
         <a class="navbar-brand" href="#">
             <div class="brand-img">GREEN CORE</div>
         </a>
-    <!-- Search Box (desktop) -->
+
+        <!-- Search Box (desktop) -->
         <div class="d-none d-lg-flex align-items-center flex-grow-1 mx-lg-4">
-            <input type="search" class="form-control search-custom ms-lg-5" placeholder="Cari Produk">
+            <div class="input-group">
+                <input type="search" 
+                       name="query" 
+                       id="searchInputDesktop" 
+                       class="form-control search-custom ms-lg-5" 
+                       placeholder="Cari Produk" 
+                       required>
+                <button class="btn btn-success" id="searchBtnDesktop">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
-    <!-- Search Icon (mobile) -->
+
+        <!-- Search Icon (mobile) -->
         <button class="btn btn-success d-lg-none me-2" id="mobileSearchBtn">
             <i class="fas fa-search"></i>
         </button>
-    <!-- Toggler -->
+
+        <!-- Toggler -->
         <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#navtoggler" aria-controls="navtoggler">
             <i class="fas fa-bars"></i>
         </button>
@@ -21,8 +34,18 @@
 </nav>
 
 <!-- Search input muncul saat icon ditekan (mobile) -->
-<div id="mobileSearchBox" class="d-lg-none px-3 py-2 bg-light" style="display: none;">
-    <input type="text" class="form-control" placeholder="Cari Produk">
+<div id="mobileSearchBox" class="d-lg-none px-3 py-2 bg-light d-none">
+    <div class="input-group">
+        <input type="text" 
+               name="query" 
+               id="searchInputMobile" 
+               class="form-control" 
+               placeholder="Cari Produk" 
+               required>
+        <button class="btn btn-success" id="searchBtnMobile">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
 </div>
 
 <!-- Offcanvas Menu -->
@@ -62,3 +85,41 @@
         </ul>
     </div>
 </div>
+
+<script>
+        $(document).ready(function(){
+    function doSearch(keyword){
+        if(keyword){
+            window.location.href = "<?= $basepath ?>/pencarian/index.php?query=" + encodeURIComponent(keyword);
+        }
+    }
+
+    // Desktop
+    $("#searchInputDesktop").on("keypress", function(e){
+        if(e.which === 13){ 
+            e.preventDefault();
+            doSearch($(this).val().trim());
+        }
+    });
+    $("#searchBtnDesktop").on("click", function(){
+        doSearch($("#searchInputDesktop").val().trim());
+    });
+
+    // Mobile: tombol buka/tutup search
+    $("#mobileSearchBtn").on("click", function(){
+        $("#mobileSearchBox").toggleClass("d-none");
+        $("#searchInputMobile").focus();
+    });
+
+    // Mobile: enter + klik
+    $("#searchInputMobile").on("keypress", function(e){
+        if(e.which === 13){
+            e.preventDefault();
+            doSearch($(this).val().trim());
+        }
+    });
+    $("#searchBtnMobile").on("click", function(){
+        doSearch($("#searchInputMobile").val().trim());
+    });
+});
+</script>

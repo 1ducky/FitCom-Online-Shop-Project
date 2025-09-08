@@ -22,6 +22,7 @@
 
     <!-- Jquery -->
     <script>
+    // Carousel multi item
     document.addEventListener('DOMContentLoaded', function () {
     const itemsPerSlide = 2;               // 2 kartu per slide
     const items = document.querySelectorAll('#promoCarousel .carousel-item');
