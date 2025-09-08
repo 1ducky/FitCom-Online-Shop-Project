@@ -8,3 +8,7 @@ a{
   text-decoration: none !important;
 
 }
+
+body{
+  min-height: 100wh;
+}
