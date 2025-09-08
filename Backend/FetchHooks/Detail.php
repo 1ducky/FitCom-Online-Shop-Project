@@ -45,7 +45,8 @@ function Detail($method=null,$params=null) : array  {
         left join category c
         on p.kode_jenis = c.kode_jenis
         where nama_produk like '%$keyword%' 
-        or kode_produk like '%$keyword%'" . ' limit '. $limit .' offset ' . $offset;
+        or kode_produk like '%$keyword%'
+        or p.kode_jenis like '%$keyword%'" . ' limit '. $limit .' offset ' . $offset;
         
         $result = mysqli_query($conn,$sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
