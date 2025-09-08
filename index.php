@@ -10,6 +10,9 @@
     <!--------- Promo product ------------->
     <?php include 'component/promo.php'; ?>
 
+    <!--------- Testimonial ------------->
+    <?php include 'component/testimoni.php'; ?>
+
 <!--- footer -->
     <?php include "component/footer.php"?>
 
