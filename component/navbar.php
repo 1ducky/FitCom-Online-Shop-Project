@@ -1,8 +1,8 @@
 <?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?= $basepath?>/">
             <div class="brand-img">GREEN CORE</div>
         </a>
 
@@ -14,6 +14,7 @@
                        id="searchInputDesktop" 
                        class="form-control search-custom ms-lg-5" 
                        placeholder="Cari Produk" 
+                       value="<?= ($_GET['keyword']) ?? ''?>"
                        required>
                 <button class="btn btn-success" id="searchBtnDesktop">
                     <i class="fas fa-search"></i>
@@ -34,13 +35,14 @@
 </nav>
 
 <!-- Search input muncul saat icon ditekan (mobile) -->
-<div id="mobileSearchBox" class="d-lg-none px-3 py-2 bg-light d-none">
+<div id="mobileSearchBox" class="d-lg-none px-3 py-2 bg-light d-none fixed-top z-1 ">
     <div class="input-group">
         <input type="text" 
                name="query" 
                id="searchInputMobile" 
                class="form-control" 
                placeholder="Cari Produk" 
+               value="<?= ($_GET['keyword']) ?? ''?>"
                required>
         <button class="btn btn-success" id="searchBtnMobile">
             <i class="fas fa-search"></i>
@@ -73,11 +75,11 @@
             </li>
             <li class="nav-item">
                 <?php if (isset($_SESSION['is_login']) && $_SESSION['is_login']): ?>
-                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/logout.php">
+                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/account/log-out">
                         <i class="fas fa-sign-out-alt me-2"></i>Log out
                     </a>
                 <?php else: ?>
-                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/login.php">
+                    <a class="nav-link nav-link-custom" href="<?= $basepath ?>/account/login">
                         <i class="fas fa-sign-in-alt me-2"></i>Sign in
                     </a>
                 <?php endif; ?>
@@ -86,11 +88,13 @@
     </div>
 </div>
 
+
+
 <script>
         $(document).ready(function(){
     function doSearch(keyword){
         if(keyword){
-            window.location.href = "<?= $basepath ?>/pencarian/index.php?query=" + encodeURIComponent(keyword);
+            window.location.href = "<?= $basepath ?>/produk/pencarian/?keyword=" + encodeURIComponent(keyword);
         }
     }
 

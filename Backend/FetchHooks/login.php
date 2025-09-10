@@ -41,10 +41,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
         }
 
         // Redirect setelah sukses
-        header("Location: ../../index.php");
+        header("Location: ../../");
         exit;
     } else {
         echo 'Email atau password salah';
-        header("Location: ../../login.php?error=Invalid email or password.");
+        header("Location: ../../account/login?error=Invalid email or password.");
     }
 }

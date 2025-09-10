@@ -9,6 +9,19 @@ a{
 
 }
 
+body,html{
+  height: 100vh;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
 body{
-  min-height: 100wh;
+  padding-top: 50px;
+}
+
+footer{
+  position: absolute;
+  width: 100%;
+
 }

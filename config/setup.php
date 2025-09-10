@@ -41,5 +41,8 @@ $basedir=dirname(__DIR__   );
     <link rel="stylesheet" href="<?= $basepath ?>/css/style.css">
     <link rel="stylesheet" href="<?= $basepath ?>/css/carousel.css">
     <link rel="stylesheet" href="<?= $basepath ?>/css/promo.css">
+
+    <!-- Load JQuery -->
+    <script src="<?= $basepath  ?>/js/jquery-3.7.1.min.js"></script>
 </head>
 

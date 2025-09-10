@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
     values('$email','$hash')";
     mysqli_query($conn, $sql);
     echo "succses";
-    header("Location: ../../login.php?success=Account created successfully. Please log in.");
+    header("Location: ../../account/login?success=Account created successfully. Please log in.");
 
 
 
