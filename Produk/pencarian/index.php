@@ -1,14 +1,15 @@
 <?php 
 include(__DIR__. '/../../config/setup.php');
 
-$keyword=(string) ($_GET['keyword'] ?? '');
+$keyword = (string) str_replace('-', ' ',  ($_GET['keyword'] ?? ''));
 $page=(int) ($_GET['page'] ?? 0);
 $page=max($page,0);
 $limit=10;
 $offset= $page*$limit;
 
 try{
-    $res= @file_get_contents($basepath."/backend/api.php/detail/search/$keyword?limit=$limit&offset=$offset");  
+    $url_keyword = urlencode($keyword);
+    $res= @file_get_contents($basepath."/backend/api.php/detail/search/$url_keyword?limit=$limit&offset=$offset");  
     if($res === null){
         throw new Exception('Gagal Fetch');
     }  
