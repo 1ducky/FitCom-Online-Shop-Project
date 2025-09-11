@@ -38,7 +38,7 @@ try{
     <?php if ($data): ?>
     <div class="row container justify-content-sm-center">
         <div class="col-md-6">
-            <img src="<?= $basepath . "/image/index.php?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
+            <img src="<?= $basepath . "/image/index.php?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
 
         </div>
         <div class="col-md-6">

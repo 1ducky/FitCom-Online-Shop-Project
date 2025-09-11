@@ -7,11 +7,18 @@ function RenderProductList($data){
     ob_start();
 ?> 
 
-<section class="py-4 flex-grow-1">
+<section class="py-4 flex-grow-1 h-100">
     <div class="container">
       <h2 class="h5 fw-bold text-success mb-3 fade-in">Daftar Produk Terkait </h2>
       <?php if(!isset($data['data'])):?>
-        <h2>Tidak Ada Produk Terkait</h2>
+        <div class=" fade-in">
+            <h2>Tidak Ada Produk Terkait :(</h2>
+        </div>
+        <h2>Temukan Produk Lainnya</h2>
+
+        <h3>Promo</h3>
+        <h3>Pilihan</h3>
+        
       <?php else:?>
         <div class="row g-4">
             <?php foreach($data['data'] as $product):?>

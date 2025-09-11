@@ -1,4 +1,4 @@
-    <div class="container mt-4 main-content">
+    <div class="container main-content">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
