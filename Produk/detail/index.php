@@ -36,19 +36,25 @@ try{
     <?php include $basedir . '/component/product-list.php';?>
     <!-- Product Detail Section -->
     <?php if ($data): ?>
-    <div class="row container justify-content-sm-center">
-        <div class="col-md-6">
-            <img src="<?= $basepath . "/image/index.php?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
+        <div class="row container justify-content-sm-center">
+            <div class="col-md-6">
+                <img src="<?= $basepath . "/image/index.php?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
 
+            </div>
+            <div class="col-md-6">
+                <h2><?= htmlspecialchars($data['nama_produk']); ?></h2>
+                <p class="text-muted">Satuan: <?= htmlspecialchars($data['satuan']); ?></p>
+                <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
+                <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
+                <button class="btn btn-primary hov" onclick="">Add to Cart</button>
+            </div>
         </div>
-        <div class="col-md-6">
-            <h2><?= htmlspecialchars($data['nama_produk']); ?></h2>
-            <p class="text-muted">Satuan: <?= htmlspecialchars($data['satuan']); ?></p>
-            <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
-            <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
-            <button class="btn btn-primary hov" onclick="">Add to Cart</button>
+        <?php include $basedir . '/component/comment.php'; ?>
+
+        <div class="continer-fluid">
+            <h2>Deskripsi</h2>  
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis iure enim aliquam aperiam nisi, praesentium consequuntur dolore sunt aliquid quae, adipisci expedita non perspiciatis illo fuga. Fuga, ullam. Iste autem sapiente, nesciunt commodi veniam nihil eius excepturi, delectus, voluptatem ducimus harum quis officiis culpa? Nesciunt corrupti soluta cupiditate nemo!</p>
         </div>
-    </div>
     <?php else: ?>
         <p class="text-danger">Product not found.</p>
     <?php endif; ?>
@@ -59,7 +65,7 @@ try{
     <?php echo RenderProductList($data_req);?>
 
     <!-- Footer -->
-    <?php include __DIR__ . '/../../component/footer.php'?>
+    <?php include $basedir . '/component/footer.php'?>
 
 
 
