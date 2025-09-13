@@ -15,7 +15,7 @@
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pupuk Organik Diskon 20%</h5>
                             <p class="card-text">Tingkatkan kesuburan tanah Anda dengan pupuk organik berkualitas tinggi.</p>
-                            <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
+                            <a href="<?= $basepath ?>/Produk/" class="btn btn-success mt-auto">Beli Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,8 @@
                         <img src="./assets/pexels-muverrihhanim-18222297.jpg" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Bibit Diskon 20%</h5>
-                        <p class="card-text">Dapatkan bibit tanaman unggulan dengan kualitas terbaik untuk kebun Anda.</p>
+                        <h5 class="card-title">Alat Pertanian Diskon 20%</h5>
+                        <p class="card-text">Dapatkan alat pertanian unggulan dengan kualitas terbaik dan murah untuk kebun Anda.</p>
                         <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
                         <img src="./assets/pexels-mateusz-feliksik-1896604-13533594.jpg" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Bibit Diskon 20%</h5>
-                        <p class="card-text">Dapatkan bibit tanaman unggulan dengan kualitas terbaik untuk kebun Anda.</p>
+                        <h5 class="card-title">Bibit Cabai Diskon 20%</h5>
+                        <p class="card-text">Dapatkan bibit Cabai unggulan dengan kualitas terbaik untuk kebun Anda.</p>
                         <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
                     </div>
                 </div>

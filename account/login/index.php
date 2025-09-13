@@ -12,9 +12,10 @@ $success = $_GET['success'] ?? '';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="<?= $basepath ?>/css/account.css">
     <title>Login - GreenCore</title>
 <body class="bg-light">
-    <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="container d-flex justify-content-center align-items-center h-100">
         <div class="card shadow-lg p-4" style="max-width:400px;width:100%;">
             <h3 class="text-center mb-4">Login</h3>
 

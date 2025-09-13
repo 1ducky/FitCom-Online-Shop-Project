@@ -1,5 +1,5 @@
 <?php
-require("./db.php");
+require("../db.php");
 
 function category( $category ):array {
     global $conn;
