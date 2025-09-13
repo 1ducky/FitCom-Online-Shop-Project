@@ -1,6 +1,7 @@
 <?php
 require ('FetchHooks/Detail.php');
 require ('FetchHooks/category.php');
+require ('logic/review/fetch.php');
 
 function Router($rest) {
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -59,6 +60,9 @@ Router([
     "category" => function ( $category=null, $other=null ){
         return category($category);
     },
+    "comment" => function($id=null, $other=null) {
+        return Comment($id);
+    }
 
 
 ])
