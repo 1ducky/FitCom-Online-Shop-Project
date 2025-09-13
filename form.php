@@ -31,6 +31,18 @@
     
 </form>
 
+<h2>Comment</h2>
+<form action="Backend/logic/review/review.php?method=upload&id=3" method="post" enctype="multipart/form-data">
+    <input type="text" name="kp" placeholder="Kode Produk" required>
+    <input type="text" name="userid" placeholder="user id" required>
+    <input type="text" name="rate" placeholder="Rating" required>
+    <textarea type="text" name="text" placeholder="komentar" required></textarea>
+    <input type="text" name="method" placeholder="method" required>
+
+
+    <button type="submit" name="submit">update</button> 
+</form>
+
 <script>
     async function fetchdata(){
         const res= await fetch('./backend/api.php/detail?limit=2&offset=1')
