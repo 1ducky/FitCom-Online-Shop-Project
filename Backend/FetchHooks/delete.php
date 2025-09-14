@@ -13,13 +13,13 @@ if(isset($_POST['submit'])){
         echo 'gagal produk' . $e;
     }
     try{
-        $sql = "DELETE FROM image WHERE
-        kode_gambar ='$kode_produk'";
+        $sql = "DELETE FROM reviews WHERE
+        kode_produk ='$kode_produk'";
         mysqli_query($conn, $sql);
         echo 'berhasil hapus gambar';
 
     }catch(mysqli_sql_exception $e){
-        echo 'gagal gambar' . $e;
+        echo 'komentar' . $e;
     }
     
     
