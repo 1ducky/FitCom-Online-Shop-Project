@@ -16,16 +16,25 @@ try {
     $data = null;
 }
 
+//comment
+try{
+    $res= @file_get_contents($basepath."/backend/api.php/comment/$code?limit=3");  
+    if($res === null){
+        throw new Exception('Gagal Fetch');
+    }  
+    $data_comment = json_decode($res !== null ? $res : '[]', true);
+}catch(Exception $e){
+    $data_comment=null;
+};
 // recomendation produk list
-
 try{
     $res= @file_get_contents($basepath."/backend/api.php/detail/search/" . $data['kode_jenis'] . "?limit=5");  
     if($res === null){
         throw new Exception('Gagal Fetch');
     }  
-    $data_req = json_decode($res !== null ? $res : '[]', true);
+    $data_list = json_decode($res !== null ? $res : '[]', true);
 }catch(Exception $e){
-    $data_req=null;
+    $data_list=null;
 };
 
 ?>
@@ -34,11 +43,12 @@ try{
 <body>
     <?php include $basedir . '/component/navbar.php'; ?>
     <?php include $basedir . '/component/product-list.php';?>
+    <?php include $basedir . '/component/comment.php'; ?>
     <!-- Product Detail Section -->
     <?php if ($data): ?>
         <div class="row container justify-content-sm-center">
             <div class="col-md-6">
-                <img src="<?= $basepath . "/image/index.php?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
+                <img src="<?= $basepath . "/image?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
 
             </div>
             <div class="col-md-6">
@@ -49,7 +59,8 @@ try{
                 <button class="btn btn-primary hov" onclick="">Add to Cart</button>
             </div>
         </div>
-        <?php include $basedir . '/component/comment.php'; ?>
+
+        <?php echo RenderCommentList($data_comment);?>
 
         <div class="continer-fluid">
             <h2>Deskripsi</h2>  
@@ -62,7 +73,7 @@ try{
     
 
     <!-- tampilkan kartu produk dari hasil data -->
-    <?php echo RenderProductList($data_req);?>
+    <?php echo RenderProductList($data_list);?>
 
     <!-- Footer -->
     <?php include $basedir . '/component/footer.php'?>
