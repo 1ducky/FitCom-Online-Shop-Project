@@ -41,43 +41,49 @@ try{
 <!DOCTYPE html>
 <html lang="in_ID">
 <body>
-    <?php include $basedir . '/component/navbar.php'; ?>
-    <?php include $basedir . '/component/product-list.php';?>
-    <?php include $basedir . '/component/comment.php'; ?>
-    <!-- Product Detail Section -->
-    <?php if ($data): ?>
-        <div class="row container justify-content-sm-center">
-            <div class="col-md-6">
-                <img src="<?= $basepath . "/image?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid rounded-3" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
+    <div class="root">
 
+        <?php include $basedir . '/component/navbar.php'; ?>
+        <?php include $basedir . '/component/product-list.php';?>
+        <?php include $basedir . '/component/comment.php'; ?>
+        <!-- Product Detail Section -->
+        <?php if ($data): ?>
+            <div class="container bg-white">
+                <div class="row justify-content-sm-center p-1 py-3">
+                    <div class="col-md-6 ">
+                        <img src="<?= $basepath . "/image?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
+
+                    </div>
+                    <div class="col-md-6">
+                        <h2><?= htmlspecialchars($data['nama_produk']); ?></h2>
+                        <p class="text-muted">Satuan: <?= htmlspecialchars($data['satuan']); ?></p>
+                        <p class="text-muted">rating:</p>
+                        <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
+                        <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
+                        <button class="btn btn-primary hov" onclick="">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <h2><?= htmlspecialchars($data['nama_produk']); ?></h2>
-                <p class="text-muted">Satuan: <?= htmlspecialchars($data['satuan']); ?></p>
-                <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
-                <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
-                <button class="btn btn-primary hov" onclick="">Add to Cart</button>
+            <div class="container bg-white my-3 p-3">
+                <h2>Deskripsi</h2>  
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis iure enim aliquam aperiam nisi, praesentium consequuntur dolore sunt aliquid quae, adipisci expedita non perspiciatis illo fuga. Fuga, ullam. Iste autem sapiente, nesciunt commodi veniam nihil eius excepturi, delectus, voluptatem ducimus harum quis officiis culpa? Nesciunt corrupti soluta cupiditate nemo!</p>
             </div>
-        </div>
 
-        <?php echo RenderCommentList($data_comment);?>
+            <?php echo RenderCommentList($data_comment);?>
 
-        <div class="continer-fluid">
-            <h2>Deskripsi</h2>  
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe reiciendis iure enim aliquam aperiam nisi, praesentium consequuntur dolore sunt aliquid quae, adipisci expedita non perspiciatis illo fuga. Fuga, ullam. Iste autem sapiente, nesciunt commodi veniam nihil eius excepturi, delectus, voluptatem ducimus harum quis officiis culpa? Nesciunt corrupti soluta cupiditate nemo!</p>
-        </div>
-    <?php else: ?>
-        <p class="text-danger">Product not found.</p>
-    <?php endif; ?>
+        <?php else: ?>
+            <p class="text-danger">Product not found.</p>
+        <?php endif; ?>
 
+        
+
+        <!-- tampilkan kartu produk dari hasil data -->
+        <?php echo RenderProductList($data_list);?>
+
+        <!-- Footer -->
+        <?php include $basedir . '/component/footer.php'?>
+    </div>
     
-
-    <!-- tampilkan kartu produk dari hasil data -->
-    <?php echo RenderProductList($data_list);?>
-
-    <!-- Footer -->
-    <?php include $basedir . '/component/footer.php'?>
-
 
 
         <!-- Bootstrap & jQuery JS -->

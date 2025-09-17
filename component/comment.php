@@ -8,9 +8,9 @@ function RenderCommentList($data){
 
 
 
-<div class="container-fluid my-4 position-relative">
+<div class="container my-4 position-relative bg-white p-3">
     <h2>Ulasan Pembeli</h2>
-    <div class=" p-5">
+    <div class="py-4">
         <?php if(!isset($data['data'])):?>
             <h2>Tidak ada Penilaian</h2>
         <?php else:?>    
@@ -29,9 +29,9 @@ function RenderCommentList($data){
                     </div>
                 </section>
                 <?php endforeach?>
+                <a href="" class="text-muted position-absolute bottom-0 end-0">lihat ulasan lainnya > </a>
         <?php endif;?>
     </div>
-    <a href="" class="text-muted position-absolute bottom-0 end-0">lihat ulasan lainnya > </a>
 </div>
 
 <?php

@@ -26,15 +26,18 @@ try{
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <?php include $basedir . '/component/navbar.php'; ?>
-    <?php include $basedir . '/component/category.php'; ?>
-    <?php include $basedir . '/component/product-list.php';?>
+    <div class="root">
 
-    <!-- tampilkan kartu produk dari hasil data -->
-    <?php echo RenderProductList($data);?>
+        <?php include $basedir . '/component/navbar.php'; ?>
+        <?php include $basedir . '/component/category.php'; ?>
+        <?php include $basedir . '/component/product-list.php';?>
+
+        <!-- tampilkan kartu produk dari hasil data -->
+        <?php echo RenderProductList($data);?>
 
 
 
+    </div>
     <?php include $basedir ."/component/footer.php"; ?>
 
     <!-- Bootstrap & jQuery JS -->

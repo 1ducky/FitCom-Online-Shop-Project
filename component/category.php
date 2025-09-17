@@ -2,10 +2,10 @@
 
 ?>
 
-<div class="category">
+<div class="category container">
     <!-- Kategori -->
   <section class="py-5 bg-light">
-    <div class="container">
+    <div class="container-fluid">
       <h2 class="text-center section-title mb-4 fade-in">Kategori Produk</h2>
       <div class="row g-4 text-center fade-in">
         <a class="col-md-3 hov" href="<?= $basepath ?>/produk/Kategori?kategori=b1"><div class="category-icon">🌾</div><h6>Biji-bijian</h6></a>

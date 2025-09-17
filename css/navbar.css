@@ -1,8 +1,6 @@
         .navbar-custom {
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-            border-radius: 50px;
-            margin: 5px 15px 10px 15px;
             padding: 8px 20px;
         }
         

@@ -1,5 +1,5 @@
-    <div class="promo-section">
-    <div class="container text-center py-5">
+    <div class="promo-section container my-3">
+    <div class="container-fluid text-center py-5">
     <h1 class="fw-bold mb-5 display-5">Promo Spesial Bulan Ini!</h1>
 
     <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel">

@@ -3,18 +3,21 @@
     <!-- load Based COnfiguration -->
     <?php include('./config/setup.php'); ?>
 <body>
-    
-    <?php include 'component/navbar.php'; ?>
-    <!-- Carousel -->
-    <?php include 'component/corausel.php'; ?>
-    <!--------- Promo product ------------->
-    <?php include 'component/promo.php'; ?>
+    <div class="root">
 
-    <!--------- Testimonial ------------->
-    <?php include 'component/testimoni.php'; ?>
+        
+        <?php include 'component/navbar.php'; ?>
+        <!-- Carousel -->
+        <?php include 'component/corausel.php'; ?>
+        <!--------- Promo product ------------->
+        <?php include 'component/promo.php'; ?>
 
-<!--- footer -->
-    <?php include "component/footer.php"?>
+        <!--------- Testimonial ------------->
+        <?php include 'component/testimoni.php'; ?>
+
+        <!--- footer -->
+        <?php include "component/footer.php"?>
+    </div>
 
     <!-- Bootstrap & jQuery JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

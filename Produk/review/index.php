@@ -8,7 +8,7 @@ if (!isset($_SESSION['id_user'])) {
 
 $kode_produk = $_GET['code'] ?? null;
 if (!$kode_produk) {
-    die("Produk tidak ditemukan.");
+    echo "Produk tidak ditemukan.";
 }
 $id_user = $_SESSION['id_user'];
 ?>
