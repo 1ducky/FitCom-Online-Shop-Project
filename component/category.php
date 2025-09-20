@@ -1,10 +1,8 @@
-<?php
-
-?>
+<div class="container-fluid tc text-white pt-md-5">
 
 <div class="category container">
-    <!-- Kategori -->
-  <section class="py-5 bg-light">
+  <!-- Kategori -->
+  <section class="py-5 tc">
     <div class="container-fluid">
       <h2 class="text-center section-title mb-4 fade-in">Kategori Produk</h2>
       <div class="row g-4 text-center fade-in">
@@ -15,7 +13,9 @@
       </div>
     </div>
   </section>
-
   
+  
+  
+</div>
 
 </div>

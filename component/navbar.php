@@ -93,12 +93,11 @@ function getAvatarUrl($avatar, $basepath) {
         </div>
     </div>
 </nav>
-
-<!-- Mobile Search -->
-<div id="mobileSearchBox" class="d-none position-fixed top-0 start-0 w-100 p-2 shadow">
-    <div class="input px-2 d-flex align-items-center rounded-pill sc">
-        <button class="btn sc icon me-2 rounded-circle" id="mobileSearchClose">
-            <i class="fas fa-times"></i>
+<!-- Search input muncul saat icon ditekan (mobile) -->
+<div id="mobileSearchBox" class="text-white d-lg-none px-3 py-2 bg-light d-none fixed-top z-1 ">
+    <div class="input px-2 d-flex justify-content-around align-items-center text-white flex-fill rounded-pill sc">
+        <button class="rounded-circle sc d-block d-md-none icon z-2" id="mobileSearchBtn">
+            <
         </button>
         <input type="text" id="searchInputMobile" class="form-control border-0 bg-transparent" placeholder="Cari produk...">
         <button class="btn" id="searchBtnMobile"><i class="fas fa-search"></i></button>
