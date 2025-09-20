@@ -3,7 +3,7 @@
     <!-- load Based COnfiguration -->
     <?php include('./config/setup.php'); ?>
 <body>
-    <div class="root">
+    <div class="root mt-5 mt-md-5">
 
         
         <?php include 'component/navbar.php'; ?>

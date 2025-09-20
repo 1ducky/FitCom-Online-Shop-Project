@@ -40,13 +40,20 @@ input:focus{
   background-color: #049133;
   border: none;
 }
-
-
-
-.root{
-  padding-top: 120px;
-
+.tc{
+  background-color: #323232;
 }
+
+
+
+/* .root{
+  padding-top: 110px;
+}
+@media (min-width:768px) {
+  .root{
+    padding-top: 0;
+  }
+} */
 
 footer{
   position: absolute;

@@ -7,7 +7,7 @@ $limit=10;
 $offset= $page*$limit;
 
 try{
-    $res= @file_get_contents($basepath."/backend/api.php/detail?limit=$limit&offset=$offset");  
+    $res= @file_get_contents($basepath."/backend/api.php/detail?limit=$limit&offset=$offset&$basequery");  
     if($res === null){
         throw new Exception('Gagal Fetch');
     }  
@@ -21,10 +21,11 @@ try{
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <div class="root">
+    <div class="root mt-5 mt-md-5">
 
         <?php include $basedir . '/component/navbar.php'; ?>
         <?php include $basedir . '/component/category.php'; ?>
+        <?php include $basedir . '/component/filter.php';?>
         <?php include $basedir . '/component/product-list.php';?>
 
         <!-- tampilkan kartu produk dari hasil data -->

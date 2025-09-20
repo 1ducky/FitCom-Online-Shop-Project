@@ -41,7 +41,7 @@ try{
 <!DOCTYPE html>
 <html lang="in_ID">
 <body>
-    <div class="root">
+    <div class="root mt-5 mt-md-5">
 
         <?php include $basedir . '/component/navbar.php'; ?>
         <?php include $basedir . '/component/product-list.php';?>

@@ -50,7 +50,7 @@
     </div>
 </nav>
 <!-- Search input muncul saat icon ditekan (mobile) -->
-<div id="mobileSearchBox" class="text-white d-lg-none px-3 py-2 bg-light d-none fixed-top z-1 ">
+<div id="mobileSearchBox" class="text-white d-lg-none px-3 py-2  d-none fixed-top z-1 ">
     <div class="input px-2 d-flex justify-content-around align-items-center text-white flex-fill rounded-pill sc">
         <button class="rounded-circle sc d-block d-md-none icon z-2" id="mobileSearchBtn">
             <
