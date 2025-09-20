@@ -30,6 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `accounts` (
   `user_id` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `display_name` VARCHAR(100) DEFAULT NULL,
+  `avatar` VARCHAR(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `remember_token` varchar(255) DEFAULT NULL

@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
     }
 
     // Gunakan prepared statement biar aman
-    $stmt = $conn->prepare("SELECT user_id, email, password FROM accounts WHERE email = ? LIMIT 1");
+$stmt = $conn->prepare("SELECT user_id, email, password, display_name, avatar FROM accounts WHERE email = ? LIMIT 1");
     $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -21,9 +21,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 
     if($data && password_verify($password, $data["password"])){
         // Set session
-        $_SESSION['user_id'] = $data['user_id'];
-        $_SESSION['email'] = $data['email'];
-        $_SESSION['is_login'] = true;
+    $_SESSION['is_login'] = true;
+    $_SESSION['user_id'] = $data['user_id'];
+    $_SESSION['email'] = $data['email'];
+    $_SESSION['display_name'] = $data['display_name'] ?: ucfirst(explode('@', $data['email'])[0]);
+    $_SESSION['avatar'] = $data['avatar'] ?: null;
 
         // Remember Me
         if ($remember) {
