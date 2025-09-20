@@ -87,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="<?= $basepath ?>/assets/brand-img.png"/>
     <title>Profil Saya</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -126,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <hr>
             <div class="d-grid gap-2">
                 <a href="../../index.php" class="btn btn-success"><i class="fas fa-home me-2"></i>Kembali ke Beranda</a>
-                <a href="log-out" class="btn btn-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+                <a href="../log-out" class="btn btn-danger"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
             </div>
         </div>
     </div>
