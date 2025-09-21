@@ -48,7 +48,7 @@ function getAvatarUrl($avatar, $basepath) {
             </button>
 
             <!-- User Login -->
-            <div class="dropdown">
+            <div class="dropdown d-flex flex-row">
                 <?php if (isset($_SESSION['is_login']) && $_SESSION['is_login']): ?>
                     <?php 
                         $email = $_SESSION['email']; 
@@ -57,7 +57,7 @@ function getAvatarUrl($avatar, $basepath) {
                         $avatar = $_SESSION['avatar'] ?? null;
                         $initial = strtoupper(substr($displayName, 0, 1));
                     ?>
-                    <button class="btn p-0 border-0 bg-transparent dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn p-0 border-0 bg-transparent dropdown-toggle icon" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php if ($avatar): ?>
                             <img src="<?= getAvatarUrl($avatar, $basepath) ?>" 
                                  alt="Avatar" 
@@ -65,7 +65,7 @@ function getAvatarUrl($avatar, $basepath) {
                                  style="width:40px; height:40px; object-fit:cover;">
                         <?php else: ?>
                             <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                                 style="width:40px; height:40px; font-weight:bold;">
+                                 style="width:40px; height:40px; font-weight:bold; line-height: 1px; font-size: 16px;">
                                 <?= $initial ?>
                             </div>
                         <?php endif; ?>

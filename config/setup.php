@@ -23,6 +23,10 @@ if (!isset($_SESSION['is_login']) && isset($_COOKIE['remember_token'])) {
 include (__DIR__ . '/envloader.php');
 $basepath=$env['ROOT_PATH'].$env['MAIN_PATH'];
 $basedir=dirname(__DIR__   );
+$query= $_GET;
+$basequery=(string) (http_build_query($query) ?? '');
+$currentPath=$_SERVER['REQUEST_URI'];
+$baseurl=parse_url($currentPath,PHP_URL_PATH);
 ?>
 
 <head>

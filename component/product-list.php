@@ -8,7 +8,7 @@ function RenderProductList($data){
     ob_start();
 ?> 
 
-<section class="py-4 flex-grow-1 h-100">
+<section class="py-4 flex-grow-1 ">
     <div class="container">
         
 
