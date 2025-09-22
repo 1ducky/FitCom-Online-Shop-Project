@@ -55,11 +55,21 @@ try{
 
                     </div>
                     <div class="col-md-6">
-                        <h2><?= htmlspecialchars($data['nama_produk']); ?></h2>
-                        <p class="text-muted">Satuan: <?= htmlspecialchars($data['satuan']); ?></p>
+                        <h2 class="mt-md-0 mt-3" ><?= htmlspecialchars($data['nama_produk']); ?></h2>
                         <p class="text-muted">rating:</p>
-                        <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
+                        <div class="price d-flex">
+                            <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
+                            <p class="text-muted text-start align-self-end"> /per <?= htmlspecialchars($data['satuan']); ?></p>
+                        </div>
                         <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
+                        <div class="d-flex text-center align-items-center my-3">
+                            <h5 class="text-center h-100 m-0 me-3">Kuantitas</h5>
+                            <button class="icon border-0" onclick="updatecount('+')">+</button>
+                            <p id="counter" class="text-center h-100 m-0 mx-5">0</p>
+                            <button class="icon border-0" onclick="updatecount('-')">-</button>
+                            <h5 class="text-center h-100 m-0 ms-3"><?= htmlspecialchars($data['satuan']); ?></h5>
+                            
+                        </div>
                         <button class="btn btn-primary hov" onclick="">Add to Cart</button>
                     </div>
                 </div>
@@ -89,6 +99,18 @@ try{
         <!-- Bootstrap & jQuery JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        let kuantitas=0;
+        function updatecount(operator) {
+
+            if (operator == '+'){
+                kuantitas++;
+            }else if(operator == '-'){
+                kuantitas<=0 ? null : kuantitas--;
+                
+            }
+            $("#counter").text(kuantitas)
+        }
+
         function scrollTriger() {
             $(".fade-in").each(function () {  
                 let rect=this.getBoundingClientRect();

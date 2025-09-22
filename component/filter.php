@@ -15,7 +15,7 @@
             <?php echo (is_null($_GET['price'] ?? null)) ? 'Harga' : (($_GET['price'] == 'asc') ? 'Termurah' : 'Termahal')?>
         </button>
         <ul class="dropdown-menu" aria-label="priceMenu">
-            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['price'=> 'asc']))?>" class="dropdown-item" data-sort="Terendah">Terendah</a></li>
+            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['price'=> 'asc']))?>" class="dropdown-item" data-sort="Terendah">Termurah</a></li>
             <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['price'=> 'desc']))?>" class="dropdown-item" data-sort="Tertinggi">Termahal</a></li>
         </ul>
     </div>
