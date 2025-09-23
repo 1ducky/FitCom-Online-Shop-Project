@@ -12,7 +12,7 @@ function RenderProductList($data){
     <div class="container">
         
 
-      <h2 class="h5 fw-bold text-success mb-3 fade-in">Daftar Produk Terkait </h2>
+      <h2 class=" fw-bold text-success mb-3 fade-in">Daftar Produk Terkait </h2>
       <?php if(!isset($data['data'])):?>
         <div class=" fade-in">
             <h2>Tidak Ada Produk Terkait :(</h2>
@@ -31,9 +31,9 @@ function RenderProductList($data){
                         <div class="card product-card h-100">
                         <img src="<?=$imgurl ?>" class="card-img-top" alt="<?=htmlspecialchars($product['nama_produk']) ?>">
                             <div class="card-body">
-                                <h5 class="card-title"><?=htmlspecialchars($product['nama_produk']) ?></h5>
-                                <p class="card-text"><?=htmlspecialchars($product['kriteria']) ?></p>
-                                <a href="<?= $basepath . '/produk/detail/?code=' . $product['kode_produk']?>" class="btn btn-success">Lihat Detail</a>
+                                <h5 class="card-title text-capitalize text-center"><?=htmlspecialchars($product['nama_produk']) ?></h5>
+                                <p class="card-text si"><?=htmlspecialchars($product['kriteria']) ?></p>
+                                <a href="<?= $basepath . '/produk/detail/?code=' . $product['kode_produk']?>" class="btn tc  fw-bold tshov">Lihat Detail</a>
                             </div>
                         </div>
                     </div>

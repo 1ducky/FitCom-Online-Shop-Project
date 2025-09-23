@@ -39,7 +39,7 @@ $success = $_GET['success'] ?? '';
                         </button>
                     </div>
                 </div>
-                <button type="submit" name="submit" class="btn btn-primary w-100">Daftar</button>
+                <button type="submit" name="submit" class="btn btn-success w-100">Daftar</button>
             </form>
 
             <p class="text-center mt-3 mb-0">

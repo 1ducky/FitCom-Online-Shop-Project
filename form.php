@@ -1,5 +1,5 @@
 <h2>upload</h2>
-<form action="Backend/Fetchhooks/upload.php" method="post" enctype="multipart/form-data">
+<form action="Backend/CRUD/upload.php" method="post" enctype="multipart/form-data">
     <input type="text" name="kp" placeholder="Kode Produk" required>
     <input type="text" name="np" placeholder="Nama Produk" required>
     <input type="text" name="s" placeholder="Satuan" required>
@@ -12,7 +12,7 @@
 </form>
 
 <h2>update</h2>
-<form action="Backend/Fetchhooks/update.php" method="post" enctype="multipart/form-data">
+<form action="Backend/CRUD/update.php" method="post" enctype="multipart/form-data">
     <input type="text" name="kp" placeholder="Kode Produk" required>
     <input type="text" name="np" placeholder="Nama Produk" required>
     <input type="text" name="s" placeholder="Satuan" required>
@@ -24,7 +24,7 @@
     <button type="submit" name="submit">update</button> 
 </form>
 
-<form action="Backend/Fetchhooks/delete.php" method="post" enctype="multipart/form-data">
+<form action="Backend/CRUD/delete.php" method="post" enctype="multipart/form-data">
 
     <input type="text" name="kp" placeholder="Kode Produk" required>
     <button type="submit" name="submit">delete</button>

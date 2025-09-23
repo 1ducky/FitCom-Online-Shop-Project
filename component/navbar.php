@@ -107,7 +107,10 @@ function getAvatarUrl($avatar, $basepath) {
 <!-- Offcanvas Menu -->
 <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="navtoggler">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title">GreenCore Menu</h5>
+        <a class="d-flex gap-2 align-items-center text-white text-decoration-none" href="<?= $basepath ?>/">
+            <img src="<?= $basepath ?>/assets/icon.png" alt="GreenCore" class="icon">
+            <span class="navbar-brand mb-0 h1 text-white">GreenCore</span>
+        </a>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">

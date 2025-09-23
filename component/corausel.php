@@ -1,14 +1,14 @@
     <div class="container main-content">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="heroCarousel" class="carousel slide shadow" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item active rounded-3">
                     <img src="./assets/pexels-arina-krasnikova-6316520.jpg" class="img-fluid d-block w-100" alt="Pertanian Organik">
                     <div class="carousel-caption">
                         <h2 class="fw-bold">Pertanian Organik Modern</h2>
                         <p>Dapatkan produk pertanian organik berkualitas tinggi untuk hasil panen yang melimpah</p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item rounded-3">
                     <img src="./assets/Organik-Petrosida.png" class="img-fluid d-block w-100" alt="Pupuk Berkualitas">
                     <div class="carousel-caption">
                         <h2 class="fw-bold">Pupuk Berkualitas Tinggi</h2>

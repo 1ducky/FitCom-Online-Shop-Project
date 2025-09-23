@@ -1,10 +1,10 @@
 :root {
       --main-green: #2e7d32;   /* hijau utama */
-      --light-green: #e8f5e9; /* hijau muda */
+      --light-green: #dcf1dd; /* hijau muda */
       --dark-green: #1b5e20;  /* hijau gelap */
     }
 a{
-  color: inherit !important;
+
   text-decoration: none !important;
 
 }
@@ -39,11 +39,54 @@ input:focus{
   border: none;
 }
 .tc{
-  background-color: #323232;
+  background-color: #df531b;
 }
 
+/* Base Font Style */
+h2,h5{
+  font-family: serif;
+  font-weight: bold;
+}
 
+.si{
+  font-family: serif;
+  font-style: italic;
+}
 
+/* Base UI */
+
+.bor {
+  border: 1px solid black;
+}
+.bor:hover{
+  border-color: black;
+}
+
+/* Base Transtion */
+.hov{
+        transition: transform .3s ease, box-shadow .3s ease;
+}
+.hov:hover{
+  transform: translateY(-5px);
+}
+
+/* Button Transtion */
+.tshov:hover{
+  color: #df531b;
+  border: 1px solid #df531b;
+  background-color: white;
+}
+.tshov{
+  color: white;
+}
+.sshov:hover{
+  color: #049133;
+  border: 1px solid #049133;
+  background-color: white;
+}
+.sshov{
+  color: white;
+}
 /* .root{
   padding-top: 110px;
 }
