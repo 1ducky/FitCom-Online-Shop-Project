@@ -57,7 +57,7 @@ function getAvatarUrl($avatar, $basepath) {
                         $avatar = $_SESSION['avatar'] ?? null;
                         $initial = strtoupper(substr($displayName, 0, 1));
                     ?>
-                    <button class="btn p-0 border-0 bg-transparent dropdown-toggle icon" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn p-0 border-0 bg-transparent icon" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php if ($avatar): ?>
                             <img src="<?= getAvatarUrl($avatar, $basepath) ?>" 
                                  alt="Avatar" 
