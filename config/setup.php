@@ -45,6 +45,7 @@ $baseurl=parse_url($currentPath,PHP_URL_PATH);
     <link rel="stylesheet" href="<?= $basepath ?>/css/style.css">
     <link rel="stylesheet" href="<?= $basepath ?>/css/carousel.css">
     <link rel="stylesheet" href="<?= $basepath ?>/css/promo.css">
+    <link rel="stylesheet" href="<?= $basepath ?>/css/tentang.css">
 
     <!-- Load JQuery -->
     <script src="<?= $basepath  ?>/js/jquery-3.7.1.min.js"></script>

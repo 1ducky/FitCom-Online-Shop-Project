@@ -1,0 +1,103 @@
+.about-hero {
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+    color: white;
+    padding: 100px 0 80px;
+    margin-top: 76px; /* Untuk offset fixed navbar */
+}
+
+.mission-vision {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.value-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.team-section {
+    padding: 80px 0;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e8f5e9;
+    margin-bottom: 15px;
+}
+
+.stats-section {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    color: white;
+    padding: 60px 0;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sustainability-goals {
+    padding: 80px 0;
+    background-color: #f1f8e9;
+}
+
+.goal-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.goal-icon {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.cta-section {
+    background-color: #4caf50;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
