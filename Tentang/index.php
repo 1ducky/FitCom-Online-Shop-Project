@@ -197,7 +197,7 @@
                 <h2 class="display-6 fw-bold mb-4">Bergabunglah dengan Gerakan Hijau Kami</h2>
                 <p class="lead mb-5">Mari bersama-sama menciptakan masa depan yang lebih hijau dan berkelanjutan untuk generasi mendatang.</p>
 
-                <!-- Hubungi Kami - 3 Item dengan Ikon Besar -->
+                <!-- Hubungi Kami -->
                 <div class="contact-minimalist bg-white rounded-4 p-5 mt-4 border">
                     <h3 class="fw-bold mb-4 text-success position-relative text-center">
                         <span class="bg-white px-3">Hubungi Kami</span>
