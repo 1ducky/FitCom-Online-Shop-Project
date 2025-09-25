@@ -66,7 +66,8 @@ INSERT INTO `category` (`id`, `kode_jenis`, `kriteria`) VALUES
 --
 
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL DEFAULT 1,
   `kode_produk` varchar(10) NOT NULL,
   `nama_produk` varchar(255) NOT NULL,
   `satuan` varchar(10) NOT NULL,
@@ -76,8 +77,10 @@ CREATE TABLE `products` (
   `update_at` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `kode_jenis` varchar(10) DEFAULT NULL,
   `gambar` mediumblob DEFAULT NULL,
-  `type` varchar(50) DEFAULT NULL
+  `type` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 -- --------------------------------------------------------
 

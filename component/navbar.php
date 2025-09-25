@@ -74,10 +74,11 @@ function getAvatarUrl($avatar, $basepath) {
                         <li class="dropdown-item-text">Hi, <?= htmlspecialchars($displayName) ?></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="<?= $basepath ?>/account/profile"><i class="fas fa-user me-2"></i>Profil</a></li>
+                        <li><a class="dropdown-item" href="<?= $basepath ?>/list/produk"><i class="fas fa-box me-2"></i>Produk Saya</a></li>
                         <li><a class="dropdown-item" href="<?= $basepath ?>/account/log-out"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
                     </ul>
                 <?php else: ?>
-                    <button class="btn p-0 border-0 bg-transparent dropdown-toggle" type="button" id="guestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn p-0 border-0 bg-transparent" type="button" id="guestDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="<?= $basepath ?>/image/notfound.jpg" alt="Guest" class="rounded-circle" style="width:40px; height:40px; object-fit:cover;">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="guestDropdown">

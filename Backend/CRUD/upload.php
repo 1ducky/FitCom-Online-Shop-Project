@@ -23,7 +23,6 @@ if(isset($_POST['submit']) ){
         $type=mime_content_type($tmpPath);
         $image=file_get_contents($tmpPath);
     }
-
     insertProduct($kode_produk,$nama_produk,$satuan,$harga,$stok,$kode_jenis,$image,$type);
 }else{
     echo 'No Update Data';
@@ -32,7 +31,7 @@ if(isset($_POST['submit']) ){
 function insertProduct($kp,$np,$s,$h,$stok,$j,$image,$type){
     global $conn;
     $sql = "insert into products 
-    (kode_produk,nama_produk,satuan,harga,stok,kode_jenis,gambar,type) 
+    (user_id,kode_produk,nama_produk,satuan,harga,stok,kode_jenis,gambar,type) 
     values (?,?,?,?,?,?,?,?)";
     $null= null;
 
