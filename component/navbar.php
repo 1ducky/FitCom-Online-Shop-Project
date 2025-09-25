@@ -23,27 +23,27 @@ function getAvatarUrl($avatar, $basepath) {
         <div class="flex-fill mx-4 d-none d-md-block">
             <!-- Search -->
             <div class="input px-2 d-flex align-items-center text-white flex-fill rounded-pill sc mb-2">
-                <input type="text" id="searchInputDesktop" class="form-control border-0 bg-transparent text-white" placeholder="Cari produk...">
+                <input type="text" id="searchInputDesktop" class="form-control border-0 bg-transparent text-white" placeholder="Cari produk..." value="<?= $_GET['keyword'] ?? ''?>">
                 <button class="border-0 bg-transparent text-white icon" id="searchBtnDesktop">
                     <i class="fas fa-search"></i>
                 </button>
             </div>
             <!-- Links -->
             <ul class="d-flex justify-content-around list-unstyled text-white mb-0">
-                <li><a href="<?= $basepath ?>/" class="text-white text-decoration-none">Beranda</a></li>
+                <li><a href="<?= $basepath ?>/" class="text-white fw-bold">Beranda</a></li>
                 |
-                <li><a href="<?= $basepath ?>/Produk" class="text-white text-decoration-none">Produk</a></li>
+                <li><a href="<?= $basepath ?>/Produk" class="text-white fw-bold">Produk</a></li>
                 |
-                <li><a href="<?= $basepath ?>/keranjang" class="text-white text-decoration-none">Keranjang</a></li>
+                <li><a href="<?= $basepath ?>/keranjang" class="text-white fw-bold">Keranjang</a></li>
                 |
-                <li><a href="<?= $basepath ?>/tentang" class="text-white text-decoration-none">Tentang</a></li>
+                <li><a href="<?= $basepath ?>/tentang" class="text-white fw-bold">Tentang</a></li>
             </ul>
         </div>
 
         <!-- Right Side -->
         <div class="d-flex align-items-center gap-3">
             <!-- Mobile Search -->
-            <button class="btn btn-sm sc d-block d-md-none icon" id="mobileSearchBtn">
+            <button class="sc d-block d-md-none icon rounded-circle" id="mobileSearchBtn">
                 <i class="fas fa-search"></i>
             </button>
 
@@ -70,7 +70,7 @@ function getAvatarUrl($avatar, $basepath) {
                             </div>
                         <?php endif; ?>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end bg-success" aria-labelledby="userDropdown">
+                    <ul class="dropdown-menu dropdown-menu-end bg-white" aria-labelledby="userDropdown">
                         <li class="dropdown-item-text">Hi, <?= htmlspecialchars($displayName) ?></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="<?= $basepath ?>/account/profile"><i class="fas fa-user me-2"></i>Profil</a></li>

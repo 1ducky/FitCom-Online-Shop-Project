@@ -2,10 +2,6 @@
 include(__DIR__. '/../../config/setup.php');
 
 $keyword = (string) str_replace(' ', '-',  ($_GET['keyword'] ?? ''));
-$page=(int) ($_GET['page'] ?? 0);
-$page=max($page,0);
-$limit=10;
-$offset= $page*$limit;
 
 try{
     $url_keyword = urlencode($keyword);
@@ -14,6 +10,8 @@ try{
         throw new Exception('Gagal Fetch');
     }  
     $data = json_decode($res !== null ? $res : '[]', true);
+    $total=$data['total'] ?? null;
+    $totalPage=max(ceil($total/$limit),1);
 }catch(Exception $e){
     $data=null;
 };
@@ -33,9 +31,11 @@ try{
         <?php include $basedir . '/component/category.php'; ?>
         <?php include $basedir . '/component/filter.php';?>
         <?php include $basedir . '/component/product-list.php';?>
+        <?php include $basedir . '/component/pagination.php';?>
         
         <!-- tampilkan kartu produk dari hasil data -->
         <?php echo RenderProductList($data);?>
+        <?php echo pagination($page,$totalPage);?>
         
     </div>
 

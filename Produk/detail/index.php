@@ -50,13 +50,12 @@ try{
         <?php if ($data): ?>
             <div class="container bg-white">
                 <div class="row justify-content-sm-center p-1 py-3">
-                    <div class="col-md-6 ">
+                    <div class="col-md-6 dh">
                         <img src="<?= $basepath . "/image?code=" . urlencode($data['kode_produk']); ?>" class="img-fluid" alt="<?= htmlspecialchars($data['nama_produk']); ?>">
 
                     </div>
                     <div class="col-md-6">
                         <h2 class="mt-md-0 mt-3" ><?= htmlspecialchars($data['nama_produk']); ?></h2>
-                        <p class="text-muted">rating:</p>
                         <div class="price d-flex">
                             <h4 class="text-success">Rp <?= number_format((float)$data['harga'], 0, ',', '.'); ?></h4>
                             <p class="text-muted text-start align-self-end"> /per <?= htmlspecialchars($data['satuan']); ?></p>
@@ -64,9 +63,9 @@ try{
                         <p>Stok tersedia: <?= htmlspecialchars($data['stok']); ?></p>
                         <div class="d-flex text-center align-items-center my-3">
                             <h5 class="text-center h-100 m-0 me-3">Kuantitas</h5>
-                            <button class="icon border-0" onclick="updatecount('+')">+</button>
-                            <p id="counter" class="text-center h-100 m-0 mx-5">0</p>
                             <button class="icon border-0" onclick="updatecount('-')">-</button>
+                            <p id="counter" class="text-center m-0 px-5 bg-dark-subtle icon d-flex align-items-center justify-content-center">0</p>
+                            <button class="icon border-0" onclick="updatecount('+')">+</button>
                             <h5 class="text-center h-100 m-0 ms-3"><?= htmlspecialchars($data['satuan']); ?></h5>
                             
                         </div>

@@ -3,11 +3,11 @@
 
     <div class="dropdown">
         <button class="btn bor" type="button" id="sortMenu" data-bs-toggle="dropdown" aria-expanded="false">
-            <?php echo (is_null($_GET['order'] ?? null)) ? 'Tanggal' : (($_GET['order'] == 'asc') ? 'Terbaru' : 'Terlama')?>
+            <?php echo (is_null($_GET['order'] ?? null)) ? 'Tanggal' : (($_GET['order'] == 'desc') ? 'Terbaru' : 'Terlama')?>
         </button>
         <ul class="dropdown-menu" aria-label="sortMenu">
-            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['order'=> 'asc']))?>" class="dropdown-item" data-sort="Terbaru">Terbaru</a></li>
-            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['order'=> 'desc']))?>" class="dropdown-item" data-sort="Terlama">Terlama</a></li>
+            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['order'=> 'desc']))?>" class="dropdown-item" data-sort="Terbaru">Terbaru</a></li>
+            <li><a href="<?php echo $baseurl . '?' . http_build_query(array_merge($query,['order'=> 'asc']))?>" class="dropdown-item" data-sort="Terlama">Terlama</a></li>
         </ul>
     </div>
     <div class="dropdown ">

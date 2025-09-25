@@ -13,7 +13,7 @@
                     <p class="mb-0">Sejak 2023, GreenCore berkomitmen untuk menyediakan produk pertanian berkualitas tinggi yang ramah lingkungan dan mendukung petani lokal.</p>
                 </div>
                 <div class="col-lg-6 text-center fade-in-up">
-                    <img src="<?php echo $basepath; ?>/images/about-hero.png" alt="Pertanian Berkelanjutan" class="img-fluid rounded-3 shadow-lg" style="max-height: 400px;">
+                    <img src="<?php echo $basepath; ?>/assets/Cakup.png" alt="Pertanian Berkelanjutan" class="img-fluid rounded-3 shadow-lg" style="max-height: 400px;">
                 </div>
             </div>
         </div>
@@ -212,7 +212,7 @@
                                     <i class="fas fa-envelope fa-2x text-white"></i>
                                 </div>
                                 <h6 class="fw-bold mb-2">Email</h6>
-                                <p class="text-muted mb-2">isi email</p>
+                                <p class="text-muted mb-2">realhadyanfico@gmail.com</p>
                                 <span class="badge bg-success">Response 24/7</span>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                                     <i class="fas fa-phone fa-2x text-white"></i>
                                 </div>
                                 <h6 class="fw-bold mb-2">Telepon</h6>
-                                <p class="text-muted mb-2">no telp</p>
+                                <p class="text-muted mb-2">0858 5326 8922</p>
                                 <span class="badge bg-success">Senin-Jumat</span>
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                     <a href="<?php echo $basepath; ?>/Produk" class="btn btn-success btn-lg me-3 px-4 mb-2">
                         <i class="fas fa-seedling me-2"></i>Jelajahi Produk
                     </a>
-                    <a href="isi email di sini" class="btn btn-outline-light btn-lg px-4 mb-2">
+                    <a href="mailto:realhadyanfico@gmail.com" class="btn btn-outline-light btn-lg px-4 mb-2">
                         <i class="fas fa-envelope me-2"></i>Email Kami
                     </a>
                 </div>

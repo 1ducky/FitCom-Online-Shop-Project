@@ -27,6 +27,14 @@ $query= $_GET;
 $basequery=(string) (http_build_query($query) ?? '');
 $currentPath=$_SERVER['REQUEST_URI'];
 $baseurl=parse_url($currentPath,PHP_URL_PATH);
+
+
+// Pagination
+$page=(int) ($_GET['page'] ?? 1);
+$page=max($page,0);
+$page=$page-1;
+$limit=10;
+$offset= $page*$limit;
 ?>
 
 <head>
@@ -34,7 +42,7 @@ $baseurl=parse_url($currentPath,PHP_URL_PATH);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko Pertanian Online - GreenCore</title>
     <!-------- Icon --------->
-    <link rel="icon" type="image/png" href="<?= $basepath ?>/assets/brand-img.png"/>
+    <link rel="icon" type="image/png" href="<?= $basepath ?>/assets/icon.png"/>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->

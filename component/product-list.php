@@ -14,13 +14,10 @@ function RenderProductList($data){
 
       <h2 class=" fw-bold text-success mb-3 fade-in">Daftar Produk Terkait </h2>
       <?php if(!isset($data['data'])):?>
-        <div class=" fade-in">
+        <div class=" fade-in pb-5">
             <h2>Tidak Ada Produk Terkait :(</h2>
         </div>
-        <h2>Temukan Produk Lainnya</h2>
-
-        <h3>Promo</h3>
-        <h3>Pilihan</h3>
+        
         
       <?php else:?>
         <div class="row g-4">
