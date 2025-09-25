@@ -10,7 +10,7 @@
                     <div class="card promo-card position-relative h-100 d-flex flex-column">
                         <span class="promo-badge">DISKON 20%</span>
                         <div class="img-container">
-                            <img src="./assets/pexels-shvetsa-5830979.jpg" class="card-img-top" alt="Pupuk Organik">
+                            <img src="./assets/Pupuk2.jpeg" class="card-img-top" alt="Pupuk Organik">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pupuk Organik Diskon 20%</h5>
@@ -27,7 +27,7 @@
                 <div class="card promo-card position-relative h-100 d-flex flex-column">
                     <span class="promo-badge">DISKON 20%</span>
                     <div class="img-container">
-                        <img src="./assets/pexels-nadin-sh-78971847-26756785.jpg" class="card-img-top" alt="Bibit Tanaman">
+                        <img src="./assets/Cakup.png" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Bibit Diskon 20%</h5>
@@ -43,7 +43,7 @@
                 <div class="card promo-card position-relative h-100 d-flex flex-column">
                     <span class="promo-badge">DISKON 20%</span>
                     <div class="img-container">
-                        <img src="./assets/pexels-muverrihhanim-18222297.jpg" class="card-img-top" alt="Bibit Tanaman">
+                        <img src="./assets/Garpu.jpeg" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Alat Pertanian Diskon 20%</h5>
@@ -59,7 +59,7 @@
                 <div class="card promo-card position-relative h-100 d-flex flex-column">
                     <span class="promo-badge">DISKON 20%</span>
                     <div class="img-container">
-                        <img src="./assets/pexels-mateusz-feliksik-1896604-13533594.jpg" class="card-img-top" alt="Bibit Tanaman">
+                        <img src="./assets/Drone.jpg" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Bibit Cabai Diskon 20%</h5>
