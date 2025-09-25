@@ -1,7 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) session_start();
 require_once(__DIR__ . "/../../Backend/db.php");
-include (__DIR__ . "/../../../config/setup.php")
+include (__DIR__ . "/../../../config/setup.php");
 
 // Kalau belum login → redirect ke login
 if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
