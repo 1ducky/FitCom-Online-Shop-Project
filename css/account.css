@@ -1,0 +1,7 @@
+.link-daftar {
+    color: aqua;
+    text-decoration: none;
+}
+.link-daftar:hover {
+    color: deepskyblue; /* warna saat hover */
+}

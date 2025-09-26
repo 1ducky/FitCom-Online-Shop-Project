@@ -1,0 +1,27 @@
+<?php
+require ("../db.php");
+
+if(isset($_GET["kp"])){
+    $kode_produk=$_GET["kp"];
+    try{
+        $sql = "DELETE FROM products WHERE
+        kode_produk ='$kode_produk'";
+        mysqli_query($conn, $sql);
+        echo 'berhasil hapus produk';
+        
+    }catch(mysqli_sql_exception $e){
+        echo 'gagal produk' . $e;
+    }
+    try{
+        $sql = "DELETE FROM reviews WHERE
+        kode_produk ='$kode_produk'";
+        mysqli_query($conn, $sql);
+        echo 'berhasil hapus gambar';
+
+    }catch(mysqli_sql_exception $e){
+        echo 'komentar' . $e;
+    }
+    
+    
+    
+}

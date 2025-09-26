@@ -1,0 +1,25 @@
+    .main-content {
+        margin-top: 20px;
+    }
+    .container .main-content,
+    #heroCarousel,
+    .carousel-inner,
+    .carousel-item{
+        height: 400px;
+    }
+
+    .carousel-item {
+        height: 100%;
+
+        overflow: hidden;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+        padding: 20px;
+    }
