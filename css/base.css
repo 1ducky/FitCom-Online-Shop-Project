@@ -1,0 +1,143 @@
+:root {
+      --main-green: #2e7d32;   /* hijau utama */
+      --light-green: #dcf1dd; /* hijau muda */
+      --dark-green: #1b5e20;  /* hijau gelap */
+    }
+a {
+  position: relative;
+  text-decoration: none !important;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width .3s;
+}
+
+li a:hover::after {
+  width: 100%;
+}
+
+
+body,html{
+  margin: 0;
+  padding: 0;
+  
+  
+}
+body::before{
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/background.jpg') repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+
+}
+/* Base Configuration */
+input:focus{
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.icon{
+  width: 40px;
+  height: 40px;
+}
+
+
+/* Base Color */
+.ic{
+  background-color: #006b24;
+}
+.ic-shadow{
+  box-shadow: 0px 0px 10px 0px #002c0f;
+}
+.sc{
+  background-color: #049133;
+  border: none;
+}
+.tc{
+  background-color: #df531b;
+}
+
+/* Base Font Style */
+h2,h5,.sb{
+  font-family: serif;
+  font-weight: bold;
+}
+
+.si{
+  font-family: serif;
+  font-style: italic;
+}
+
+/* Base UI */
+
+.bor {
+  border: 1px solid black;
+}
+.bor:hover{
+  border-color: black;
+}
+
+.table-transparent td, 
+.table-transparent th {
+  background-color: transparent !important;
+}
+
+/* Base Transtion */
+.hov{
+        transition: transform .3s ease, box-shadow .3s ease;
+}
+.hov:hover{
+  transform: translateY(-5px);
+}
+
+/* Button Transtion */
+.tshov:hover{
+  color: #df531b;
+  border: 1px solid #df531b;
+  background-color: white;
+}
+.tshov{
+  color: white;
+}
+.sshov:hover{
+  color: #049133;
+  border: 1px solid #049133;
+  background-color: white;
+}
+.sshov{
+  color: white;
+}
+.img-fluid{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+.dh{
+  height: 500px;
+}
+/* .root{
+  padding-top: 110px;
+}
+@media (min-width:768px) {
+  .root{
+    padding-top: 0;
+  }
+} */
+
+

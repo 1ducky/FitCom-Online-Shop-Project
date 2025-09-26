@@ -1,0 +1,105 @@
+/* Mobile search animation (slide down) */
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 15px;
+    bottom: 30%;
+    transform: translateY(20%);
+}
+.carousel-caption h2 {
+    font-size: 2rem;
+}
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+/* Ukuran teks di mobile */
+@media (max-width: 576px) {
+    #mobileSearchBox {
+        margin-top: 80px;
+        z-index: 99;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+    }
+    #mobileSearchBox.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    #mobileSearchClose {
+        z-index: 1100;
+    }
+
+    .navbar-custom {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+        padding: 8px 20px;
+    }
+
+    .search-custom {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        max-width: 300px;
+    }
+
+    .search-custom::placeholder {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .navbar-toggler-custom {
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 5px 10px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .navbar-toggler {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.1rem;
+    }
+    .carousel-caption p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Offcanvas styling */
+.offcanvas-custom {
+    border-radius: 20px 0 0 20px;
+    background: linear-gradient(to bottom, #28a745, #20c997);
+}
+
+.offcanvas-header-custom {
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.nav-link-custom {
+    color: white !important;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.nav-link-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 25px;
+}
+
+#mobileSearchBox {
+    margin-top: 80px;
+}
