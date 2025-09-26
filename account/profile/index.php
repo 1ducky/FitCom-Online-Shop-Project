@@ -1,7 +1,6 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) session_start();
-require_once(__DIR__ . "/../../Backend/db.php");
-include (__DIR__ . "/../../../config/setup.php");
+include(__DIR__ . '/../../config/setup.php');
+require_once($basedir . "/Backend/db.php");
 
 // Kalau belum login → redirect ke login
 if (!isset($_SESSION['is_login']) || !$_SESSION['is_login']) {
@@ -97,9 +96,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container py-5">
     <div class="card shadow-lg mx-auto" style="max-width: 600px;">
-        <div class="card-body text-center">
+        <div class="card-body text-center d-flex justify-content-center">
             <?php if ($avatar): ?>
-                <img src="<?= htmlspecialchars($avatar) ?>" alt="Avatar" class="rounded-circle mb-3" style="width:100px; height:100px; object-fit:cover;">
+                <img src="<?= htmlspecialchars($avatar) ?>" alt="Avatar" class="rounded-circle mb-3 mx-auto d-block" style="width:100px; height:100px; object-fit:cover;">
             <?php else: ?>
                 <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto mb-3"
                      style="width:100px; height:100px; font-size:2rem; font-weight:bold;">
