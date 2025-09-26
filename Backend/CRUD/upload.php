@@ -1,10 +1,6 @@
 <?php
 require ("../db.php");
-
-
-echo'<pre>';
-print_r($_POST);
-echo'</pre>';
+session_start(); // biar bisa ambil user_id dari session
 
 if(isset($_POST['submit']) ){
     $kode_produk= $_POST["kp"];
@@ -12,31 +8,40 @@ if(isset($_POST['submit']) ){
     $satuan= $_POST["s"];
     $harga= $_POST["h"];
     $stok= $_POST["stok"];
-
     $kode_jenis= $_POST["j"];
+
     $image=null;
     $type=null;
 
     if( isset($_FILES['img']) && $_FILES['img']['error'] == UPLOAD_ERR_OK) {
-        $kode= mysqli_real_escape_string($conn, $_POST['kp']);
         $tmpPath= $_FILES['img']['tmp_name'];
         $type=mime_content_type($tmpPath);
         $image=file_get_contents($tmpPath);
     }
-    insertProduct($kode_produk,$nama_produk,$satuan,$harga,$stok,$kode_jenis,$image,$type);
+
+    // ambil user_id dari session
+    $user_id = $_SESSION['user_id'] ?? null;
+
+    if(!$user_id){
+        die("User belum login, tidak bisa tambah produk");
+    }
+
+    insertProduct($user_id,$kode_produk,$nama_produk,$satuan,$harga,$stok,$kode_jenis,$image,$type);
 }else{
     echo 'No Update Data';
 }
 
-function insertProduct($kp,$np,$s,$h,$stok,$j,$image,$type){
+function insertProduct($user_id,$kp,$np,$s,$h,$stok,$j,$image,$type){
     global $conn;
-    $sql = "insert into products 
-    (user_id,kode_produk,nama_produk,satuan,harga,stok,kode_jenis,gambar,type) 
-    values (?,?,?,?,?,?,?,?)";
+    $sql = "INSERT INTO products 
+    (user_id, kode_produk,nama_produk,satuan,harga,stok,kode_jenis,gambar,type) 
+    VALUES (?,?,?,?,?,?,?,?,?)";
+
     $null= null;
 
     $stmt= $conn->prepare($sql);
-    $stmt -> bind_param('sssdisbs',
+    $stmt -> bind_param('isssdisbs',
+        $user_id, // ⬅ masukin user id sesuai session
         $kp,
         $np,
         $s,
@@ -47,14 +52,15 @@ function insertProduct($kp,$np,$s,$h,$stok,$j,$image,$type){
         $type
     );
     if($image !== null){
-        $stmt->send_long_data(6,$image);
+        $stmt->send_long_data(7,$image);
     }
-    if($stmt->execute()){
-        echo 'Upload Berhasil';
-    }else{
-        echo 'Upload gagal' . $stmt->error;
+
+    if ($stmt->execute()) {
+        $stmt->close();
+        header("Location: ../../produk/detail?code=$kp");
+        exit;
+    } else {
+        echo 'Upload gagal: ' . $stmt->error;
+        $stmt->close();
     }
-    header("Location: ../../produk/detail?code=$kp");
 }
-
-
