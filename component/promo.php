@@ -62,8 +62,8 @@
                         <img src="./assets/Drone.jpg" class="card-img-top" alt="Bibit Tanaman">
                     </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Bibit Cabai Diskon 20%</h5>
-                        <p class="card-text">Dapatkan bibit Cabai unggulan dengan kualitas terbaik untuk kebun Anda.</p>
+                        <h5 class="card-title">Drone Sawah Diskon 20%</h5>
+                        <p class="card-text">Dapatkan Peralatan Canggih IOT Untuk Mempermudah Pekerjaan Anda.</p>
                         <a href="#" class="btn btn-success mt-auto">Beli Sekarang</a>
                     </div>
                 </div>

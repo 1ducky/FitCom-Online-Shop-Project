@@ -61,7 +61,8 @@ input:focus{
   background-color: #006b24;
 }
 .ic-shadow{
-  box-shadow: 0px 0px 10px 0px #002c0f;
+box-shadow: 0px 10px 20px -5px #00200a;
+
 }
 .sc{
   background-color: #049133;

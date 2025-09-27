@@ -10,7 +10,7 @@ function getAvatarUrl($avatar, $basepath) {
 }
 ?>
 
-<nav class="navbar ic ic-shadow navbar-expand-lg fixed-top">
+<nav class="navbar ic ic-shadow navbar-expand-lg fixed-top py-3">
     <div class="container-fluid justify-content-between">
 
         <!-- Brand -->

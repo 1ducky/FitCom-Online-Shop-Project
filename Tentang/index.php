@@ -53,7 +53,7 @@
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5 fade-in-up">
-                <h2 class="display-5 fw-bold mb-3">Nilai-nilai Kami</h2>
+                <h2 class="display-5 fw-bold mb-3">Nilai-Nilai Kami</h2>
                 <p class="lead">Prinsip yang mendasari setiap langkah kami</p>
             </div>
             <div class="row g-4">
@@ -167,21 +167,21 @@
             <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 fade-in-up">
                     <div class="team-member">
-                        <img src="<?php echo $basepath; ?>/images/team-1.jpg" alt="Direktur Utama" class="team-img">
+                        <img src="<?php echo $basepath; ?>/assets/orang2.jpg" alt="Direktur Utama" class="team-img">
                         <h4>Ahmad Wijaya</h4>
                         <p class="text-muted">Direktur Utama</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-in-up">
                     <div class="team-member">
-                        <img src="<?php echo $basepath; ?>/images/team-2.jpg" alt="Kepala Pertanian" class="team-img">
+                        <img src="<?php echo $basepath; ?>/assets/orang1.jpg" alt="Kepala Pertanian" class="team-img">
                         <h4>Budi Santoso</h4>
                         <p class="text-muted">Kepala Divisi Pertanian</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 fade-in-up">
                     <div class="team-member">
-                        <img src="<?php echo $basepath; ?>/images/team-3.jpg" alt="Manajer Pemasaran" class="team-img">
+                        <img src="<?php echo $basepath; ?>/assets/orang3.jpg" alt="Manajer Pemasaran" class="team-img">
                         <h4>Citra Dewi</h4>
                         <p class="text-muted">Manajer Pemasaran</p>
                     </div>

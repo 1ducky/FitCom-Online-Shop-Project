@@ -18,15 +18,15 @@
                 <div class="carousel-item rounded-3">
                     <img src="./assets/Cangkul2.jpeg" class="img-fluid d-block w-100" alt="Benih Unggul">
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Benih Unggul Terjamin</h2>
-                        <p>Benih pilihan dengan kualitas terbaik untuk hasil panen optimal</p>
+                        <h2 class="fw-bold">Peralatan Profesional</h2>
+                        <p>Permudahkan Pekerjaan Bertani dengan Peralatan Profesional</p>
                     </div>
                 </div>
                 <div class="carousel-item rounded-3">
                     <img src="./assets/Drone.jpg" class="img-fluid d-block w-100" alt="Benih Unggul">
                     <div class="carousel-caption">
-                        <h2 class="fw-bold">Benih Unggul Terjamin</h2>
-                        <p>Benih pilihan dengan kualitas terbaik untuk hasil panen optimal</p>
+                        <h2 class="fw-bold">Peralatan Canggih IOT</h2>
+                        <p>Buat Pekerjaan Sulit menjadi Lebih Mudah Dengan IOT</p>
                     </div>
                 </div>
             </div>
