@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2025 at 04:31 PM
+-- Generation Time: Sep 27, 2025 at 04:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -39,6 +39,15 @@ CREATE TABLE `accounts` (
   `create_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `remember_token` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`user_id`, `email`, `display_name`, `avatar`, `password`, `create_at`, `remember_token`) VALUES
+(1, 'user@mail.com', 'Tokoh Alat Kebun', 'uploads/1758936647_sekop.jpg', '$2y$10$QPducvR1Z6GT9.k2HqhyHOrYeVvBF5reRNqfBwxrV7OG8fYthUIYK', '2025-09-26 17:47:14', NULL),
+(2, 'user2@mail.com', 'Tokoh Bibit Jaya', 'uploads/1758938867_Cakup.png', '$2y$10$NAH987EGS7TO4EeppFmo7.j/C1ZG6rQTqah0IkgVN3Ze6pDU5dNpa', '2025-09-26 17:47:25', NULL),
+(3, 'user3@gmail.com', 'Tokoh IOT', 'uploads/1758947793_Drone.jpg', '$2y$10$/bQLgb4IdkXJrH61pTMU0OEts43qk3wPCqX6.gioZKcbQnjgos4si', '2025-09-26 21:35:30', NULL);
 
 -- --------------------------------------------------------
 
@@ -103,14 +112,15 @@ CREATE TABLE `reviews` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `reviews`
 --
 
+INSERT INTO `reviews` (`id`, `kode_produk`, `id_user`, `komentar`, `rating`, `create_at`, `update_at`) VALUES
+(1, 'p003', 3, 'kerenn', 5.0, '2025-09-26 21:48:38', NULL);
+
 --
--- Indexes for table `accounts`
+-- Indexes for dumped tables
 --
-ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`user_id`);
 
 --
 -- Indexes for table `category`
@@ -125,31 +135,13 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `reviews`
---
-ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `accounts`
---
-ALTER TABLE `accounts`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `reviews`
---
-ALTER TABLE `reviews`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
