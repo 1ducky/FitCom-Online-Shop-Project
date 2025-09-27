@@ -94,7 +94,7 @@ function updateProduct($kp,$np,$s,$h,$stok,$j,$image,$type) {
                 header("Location: ../../list/update?code=$kp?error=gagal");
             }
         }
-        header("Location: ../../produk/detail?code=$kp");
+        header("Location: ../../list/produk/");
 
         
         

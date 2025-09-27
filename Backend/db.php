@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'root';
 $password= '';
-$db='testing';
+$db='green-core';
 
 
 try{
